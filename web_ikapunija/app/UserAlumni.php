@@ -4,13 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Libraries\UtilityDB;
 use App\Jurusan;
 use App\Prodi;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class UserAlumni extends Model
+
+class UserAlumni extends Authenticatable implements JWTSubject
 {
-
+    use Notifiable;
     /**
      * The attributes that are mass assignable.
      *
@@ -67,5 +72,14 @@ class UserAlumni extends Model
         $utility = new UtilityDB();
         $utility = $utility->excludeTable($query, $arrTable, $columns);
         return $utility;
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }

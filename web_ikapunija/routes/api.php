@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
+use Tymon\JWTAuth\Exceptions\TokenInvalidException;
 
 /*
 |--------------------------------------------------------------------------
@@ -137,4 +140,39 @@ Route::get('userAlumni','API\UserAlumniController@getList');
 Route::get('userAlumni/{id}','API\UserAlumniController@getDetail');
 Route::put('approveAlumni','API\UserAlumniController@approveAlumni');
 Route::delete('deleteDeclineAlumni','API\UserAlumniController@declineAlumni');
+
+// apps API //
+
+Route::group(['prefix' => 'mobile'], function () {
+    Route::group(['prefix' => 'auth'], function () {
+
+        Route::post('/login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
+
+        Route::group(['middleware' => 'jwt.verify'], function () {
+            Route::get('/user',function(){
+                try {
+
+                    if (! $user = JWTAuth::parseToken()->authenticate()) {
+                        return response()->json(['user_not_found'], 404);
+                    }
+
+                } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+
+                    return response()->json(['token_expired'], $e->getStatusCode());
+
+                } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
+
+                    return response()->json(['token_invalid'], $e->getStatusCode());
+
+                } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
+
+                    return response()->json(['token_absent'], $e->getStatusCode());
+
+                }
+
+                return response()->json(compact('user'));
+            });
+        });
+    });
+});
 
