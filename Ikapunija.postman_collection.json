@@ -1,0 +1,3031 @@
+{
+	"info": {
+		"_postman_id": "53587879-a5cb-4c9d-96f6-364cd8cc8618",
+		"name": "Ikapunija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Album & Gallery",
+			"item": [
+				{
+					"name": "Get Album List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/album",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"album"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Gallery List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/album/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"album",
+								"1"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Album Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/albumDetail/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"albumDetail",
+								"1"
+							]
+						},
+						"description": "type : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Gellery Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/albumImageDetail/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"albumImageDetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Album",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "tes 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addAlbum",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addAlbum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Album",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "tes 4",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editAlbum",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editAlbum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Album",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delAlbum",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delAlbum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Gallery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "Tes 2",
+									"type": "text"
+								},
+								{
+									"key": "id_album",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addGallery",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addGallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Gallery",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABBAEEDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/igAoAq3NybcR4iaUyMVADBcYUt1PXgHAHOAT2q4R521e2l9myJy5Ena93bdL8yv9vcDJtXH/bRPw/zjA6ZrRUG/tL7mZuslvF/en+Vxp1F+1pI3rtkjyOn97bn6g496f1fvOK9VL9Exe3X8r+9Fq1uTcBy0TRNGwUozKx5UMDlcgZB6de/Qispw5Ha6lpe6uvzs/wADWE1NNpWs7alqoLCgAoAKACgDB8RvPBpj3VsGae1kWWJVRZC0jpJbxqI2lhWQl51wjSxK5wrSIpLh2qyhVhQnGnWnRqRo1Jxc4Qq8rdOcoJpzjGSTlFSi5JNKSvclunF05VYynSjVpurCDSnOnzJTjCTTUZSg2oyaai2m00rPip9V1sxXltZTTS6hbQ+HJ5p7jw1fDT1+1Tgap9iBuLOS7R7WB3nsop7rUdHkuA7m7Lw2UXi18Zm2JhiMoyzEUsPnuX08lr4nMswyXMHkeKhXrqWOpYOSrYenXrVcPh69N06GOrTy2eLwtSuqrSp1OmGHwVJ0sfiaU6uWYqeYQo4XDZhhf7Ro+yhy4eeKXs6sqUIVa1GSnUw1OOMjRrxpcms4Euo6lNOPsl1eR2dpr2oWmpSy+Hbr7SbOLTpGSC0YywedFHfSq1prNrp1/azpbw2U0csn2i9l1nmOMx9aFbLa8sFhMmzbF0M9pY7JcfKtmeHw2CqJ0conUnhW4PE16FejmOHo46jiXhp4alCfPOUZWFoYWnKni6ccRWzDBYepl1TDZhhfZ4OtWxEHzY+KjX5Zexp1ac8LVqYWrS9rGtVlFRjGXZ+GZ3u9Jgu5DOzXCxSF7q0axuWItoEc3Fk4VrS43oyz25VfKlV0CrjFd9DFwx+GwuNp08RSp4rDUcRCli6FTC4qlGtBVFTxGGrRjVoVoc3LUpVIqUJpxa0MpUJYWpWw850qk6NarSlUoVYVqM3Tm4c1KrTbhUpyteE4NxlFqSbTOgrUAoAKACgAoAwvE8AuPD2sxGXyA2nXRM+508gJG0nnb4pYZE8rb5m+OaJ127lkRgGGdWFGpRrU8RUnRw9WjWpV60KsqE6VGpTlCpUhXhKM6MoQk5RqwlGVNpTi00mXTlUhVpTowjUrQq050qc6aqwqVYTjKnCVKScasZSSi6bTU03Fpp2Pyu/aE/a18TeFNVu/Cfwv8LWmpWmnwaFFrXjl7rxLqllJq+iafHrk9pYT6bdaVHcXGjwIralqV9LLLd2trIuoWjWdvEY/8y/pR/S94x4QzPF8B+E/CmHzrI8jjljxXHuJrZ9j8O8flWChnuIweDq5Tjsu9rPK8PhqWJzHFYrMMVCpCjiVi8LOi5VJ/wBpeCX0deHuIsFhuKfEHiGplGZZssXLC8I4enlWCxP1PH4qeT4fE4inmGFxfs4ZhXqzoYChh8HQqKc6Lw9dVVGCw/gx+2P4x1/xn4Z8L/FnwfaW9nq2qNf6Zr+lQeJdDhgu9bMmhW11qmnG+vNOvNF1DVb8WE06WosIb29eR7WS6lkuY/n/AAP+m5xvxTxpwpwx43cG08FHH4qlX4Z4qySjnnDeFwuPzOo+H8uxHEWAnjMRgcwyLG4/MaeUyx6isLl+KxdKpVwlaS9pS9TxR+jHwrkXDGeZ/wCGfE0sWsFRnTzvIczq5VnOIrYbB0f7WxlLJ8VChQxOEzXD4PCTzCGDfNXxeGoVYxr04/u5/rV4V3Hw7pDNHDE8lnHK8VvPLdW8bykuyW9zOqTXECltsM0yJLJGFeRFclR/qnQli50MPPH0qNDGyw9B4uhh6sq+Ho4l0Ye3pUK86VGdajTq80adWdGlOpBKcqcG+VfwxONCNSrHC1KlXDKrVWHq1aapValFVJeynVpxnUjTqShyucI1KkYyuozkkpPoK1JCgAoAKACgCnqMSz6ffQMCyzWdzEyjOWEkLqQNpByQccEH0oTSabjzpO7hZPmS1cbPR821no76id7Oz5XbSWqs+jurtWet1qj+eT4tXT/Dnxx4m0TxPY38i+I9c1/xTa/2raPcPL4c8dwXTxT6fdWWqR6cmoGx1GTS9UvNItoIxc2d1aNd3q6fbW1f4VePGLwfhr4ica5Bxllua4apxNxHxRxLQwuOy2riKS4Z45oYy0MrxVDO1hsLj6eCzOrlGZYrLqFJxr4Sth54rHRwGGox/wBUPDLBYzjvg/hbNeGMbltejkOQ5BkNXFYTH06U5Z7wjVw7c8fQrZW8RXwVTEYOnmWBw+NrVlOliaNenh8H9ar1TM+H9/rPxU8U6J4F8PSMLnWpLTSbOzg0yaWDQLKw8SR+I21u31Se7e502KysbSOPVrmSG8WWxsbdbqz1a/trLULb4fw+zbEeL/F/D/h3w1isw9tnFfA5VhcNh+H3iaHDmW5fxVQ4lnxDh8xxWZyxOXRwOCw1OlmuJrRxFOthsBg4YrD5rjKWEx2H9TjHK6fhzw/mnFueYTB+yy6GIx+IxFXOfY1c5xuL4fq5HHKq+Bo4GNHHSxGKr1KuX0oSoSpV8ViZ0MRl+Gq4nCVv6I9ASWPQ9IWZ5ZJv7OtDM8/kee8rQI0jTfZcWvms5Jk+zjyN5Plfu9tf9BNGnOjRpUamIni6lGlTpVMVVVONTEzpwUJ4ipGjGFJVK0oupNUoQpqUmqcIxtFf5PTnGpOdSFKGHhUnOcKFNzlCjCc3KNKDqOVRxppqMXOUptJc0nK7evWhIUAFABQAUAIwypHXIIwehyKAPxR0+78ffEPS57L4oeA7jxHc2k8FrAz/AAz0WB1ttNeW2ZLTUJfDM1zYMImY232BoFlBdWlXeJB8xxv4R+GPiLCrHjfgrhziedeNFOtm+ApYjF0lQjJUvq+LaWKwkoQqTipYWtRbUpXb5nf1eGPEXjrgydN8K8UZzkapOpall2Mq0aE/bSjKoq+Gi3QxEZyjGTjiKdSN4p20Oi0K38afD/w5eWvgXwHd6Ld31lPHqjWvwv0iSe8jkt5Y2hbU28PzatcLlmEMUtwEiEkmxCZN1cXBXgv4U+HmCzDL+C+BeG+HcPmuHqYTM5ZbgacMZmGFqxcJ4bGZjP2mPxFBxk0qNXEypxu+SMTq4l8SePeMMTg8bxPxVnWc1sBVhXwKxuLlLD4SvTalGthsJDlwlGreKbqU6EZysuZux+tfhAXi+E/DA1DcL8eHtFF8HjWFvtn9m232rdCiRrE3n78xKiLGfkVFACj7KMIUoqnSio06a5KcVtGEPdhFeUYpJeSPA5pT9+bcpz96cnvKUtZSfm222dFVAFABQAUAFABQB5nb2+YpSiPI9pNeIsKtt80pM67DnKZIiAUsGx26mvTeqi97xT/BHHhZezqOLahGU+VzlFS5EptPpzcqTasmu/S5ZiikXTTPIk0Ests2+3lk8xomIztdsYdxgdhgkjAJoW69Ub4ypD2kqVOVOrCnN8tenD2caita6i0mo9r272e56BGuyNF/uoq/kAK8xmi2XoPoGFABQAUAFABQB4rH4jktNa1rT2tlH2fVb9EcyN88bXUrozAqcHEnYkfSvoaeEVTDUaqlZypx0SW6ST++339zy5TtVnBractb23badrdV+d+ppTeIjLJa2v2dNt3d2tq7eY3yrcXEULEYXrhyV7bgM8ZNZywrjCpNtx5Kc5q63cYtrtYaa5krXu0tHvd+h6xXhHphQAUAFABQAUAFAHlWr/Dm6vNXvtVsda8j7dObh7ae3JETsBvCTo53IWGVUwqVBwWY8n2sNmyo0IUKmH5/ZpqM4ztzK7a5ouO6va6lZrotjjq4T2k3NTtzbrl8ktHf9CSx+H15Hd2s97rIkitbiG48qGAhpWhkWRULsyhAWUZOxzjgAHmnWzaFSlOEMPyucJQ5pTulzJptR5d7PutSYYSUZRcqjai07K+tteu34nqNeIdwUAFABQAUAFABQAUAFABQAUAFABQA/9k=",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "Tes 4",
+									"type": "text"
+								},
+								{
+									"key": "id_album",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editGallery",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editGallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Gallery",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delGallery",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delGallery"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agenda",
+			"item": [
+				{
+					"name": "Get Agenda List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "5",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "sort",
+								"value": "judul",
+								"type": "text"
+							},
+							{
+								"key": "sortType",
+								"value": "asc",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "sortType",
+								"value": "desc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/agenda",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"agenda"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\nsordt => pake nama fieldnya aja, terus sort type nya ada \"asc\" sama \"desc\" <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Agenda Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/agenda/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"agenda",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Agenda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addAgenda",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addAgenda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Agenda",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editAgenda",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editAgenda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Agenda",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delAgenda",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delAgenda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banner",
+			"item": [
+				{
+					"name": "Get Banner List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/banner",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"banner"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Banner Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/banner/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"banner",
+								"1"
+							]
+						},
+						"description": "type : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Banner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "banner",
+									"value": "/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABBAEEDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/igAoAq3NybcR4iaUyMVADBcYUt1PXgHAHOAT2q4R521e2l9myJy5Ena93bdL8yv9vcDJtXH/bRPw/zjA6ZrRUG/tL7mZuslvF/en+Vxp1F+1pI3rtkjyOn97bn6g496f1fvOK9VL9Exe3X8r+9Fq1uTcBy0TRNGwUozKx5UMDlcgZB6de/Qispw5Ha6lpe6uvzs/wADWE1NNpWs7alqoLCgAoAKACgDB8RvPBpj3VsGae1kWWJVRZC0jpJbxqI2lhWQl51wjSxK5wrSIpLh2qyhVhQnGnWnRqRo1Jxc4Qq8rdOcoJpzjGSTlFSi5JNKSvclunF05VYynSjVpurCDSnOnzJTjCTTUZSg2oyaai2m00rPip9V1sxXltZTTS6hbQ+HJ5p7jw1fDT1+1Tgap9iBuLOS7R7WB3nsop7rUdHkuA7m7Lw2UXi18Zm2JhiMoyzEUsPnuX08lr4nMswyXMHkeKhXrqWOpYOSrYenXrVcPh69N06GOrTy2eLwtSuqrSp1OmGHwVJ0sfiaU6uWYqeYQo4XDZhhf7Ro+yhy4eeKXs6sqUIVa1GSnUw1OOMjRrxpcms4Euo6lNOPsl1eR2dpr2oWmpSy+Hbr7SbOLTpGSC0YywedFHfSq1prNrp1/azpbw2U0csn2i9l1nmOMx9aFbLa8sFhMmzbF0M9pY7JcfKtmeHw2CqJ0conUnhW4PE16FejmOHo46jiXhp4alCfPOUZWFoYWnKni6ccRWzDBYepl1TDZhhfZ4OtWxEHzY+KjX5Zexp1ac8LVqYWrS9rGtVlFRjGXZ+GZ3u9Jgu5DOzXCxSF7q0axuWItoEc3Fk4VrS43oyz25VfKlV0CrjFd9DFwx+GwuNp08RSp4rDUcRCli6FTC4qlGtBVFTxGGrRjVoVoc3LUpVIqUJpxa0MpUJYWpWw850qk6NarSlUoVYVqM3Tm4c1KrTbhUpyteE4NxlFqSbTOgrUAoAKACgAoAwvE8AuPD2sxGXyA2nXRM+508gJG0nnb4pYZE8rb5m+OaJ127lkRgGGdWFGpRrU8RUnRw9WjWpV60KsqE6VGpTlCpUhXhKM6MoQk5RqwlGVNpTi00mXTlUhVpTowjUrQq050qc6aqwqVYTjKnCVKScasZSSi6bTU03Fpp2Pyu/aE/a18TeFNVu/Cfwv8LWmpWmnwaFFrXjl7rxLqllJq+iafHrk9pYT6bdaVHcXGjwIralqV9LLLd2trIuoWjWdvEY/8y/pR/S94x4QzPF8B+E/CmHzrI8jjljxXHuJrZ9j8O8flWChnuIweDq5Tjsu9rPK8PhqWJzHFYrMMVCpCjiVi8LOi5VJ/wBpeCX0deHuIsFhuKfEHiGplGZZssXLC8I4enlWCxP1PH4qeT4fE4inmGFxfs4ZhXqzoYChh8HQqKc6Lw9dVVGCw/gx+2P4x1/xn4Z8L/FnwfaW9nq2qNf6Zr+lQeJdDhgu9bMmhW11qmnG+vNOvNF1DVb8WE06WosIb29eR7WS6lkuY/n/AAP+m5xvxTxpwpwx43cG08FHH4qlX4Z4qySjnnDeFwuPzOo+H8uxHEWAnjMRgcwyLG4/MaeUyx6isLl+KxdKpVwlaS9pS9TxR+jHwrkXDGeZ/wCGfE0sWsFRnTzvIczq5VnOIrYbB0f7WxlLJ8VChQxOEzXD4PCTzCGDfNXxeGoVYxr04/u5/rV4V3Hw7pDNHDE8lnHK8VvPLdW8bykuyW9zOqTXECltsM0yJLJGFeRFclR/qnQli50MPPH0qNDGyw9B4uhh6sq+Ho4l0Ye3pUK86VGdajTq80adWdGlOpBKcqcG+VfwxONCNSrHC1KlXDKrVWHq1aapValFVJeynVpxnUjTqShyucI1KkYyuozkkpPoK1JCgAoAKACgCnqMSz6ffQMCyzWdzEyjOWEkLqQNpByQccEH0oTSabjzpO7hZPmS1cbPR821no76id7Oz5XbSWqs+jurtWet1qj+eT4tXT/Dnxx4m0TxPY38i+I9c1/xTa/2raPcPL4c8dwXTxT6fdWWqR6cmoGx1GTS9UvNItoIxc2d1aNd3q6fbW1f4VePGLwfhr4ica5Bxllua4apxNxHxRxLQwuOy2riKS4Z45oYy0MrxVDO1hsLj6eCzOrlGZYrLqFJxr4Sth54rHRwGGox/wBUPDLBYzjvg/hbNeGMbltejkOQ5BkNXFYTH06U5Z7wjVw7c8fQrZW8RXwVTEYOnmWBw+NrVlOliaNenh8H9ar1TM+H9/rPxU8U6J4F8PSMLnWpLTSbOzg0yaWDQLKw8SR+I21u31Se7e502KysbSOPVrmSG8WWxsbdbqz1a/trLULb4fw+zbEeL/F/D/h3w1isw9tnFfA5VhcNh+H3iaHDmW5fxVQ4lnxDh8xxWZyxOXRwOCw1OlmuJrRxFOthsBg4YrD5rjKWEx2H9TjHK6fhzw/mnFueYTB+yy6GIx+IxFXOfY1c5xuL4fq5HHKq+Bo4GNHHSxGKr1KuX0oSoSpV8ViZ0MRl+Gq4nCVv6I9ASWPQ9IWZ5ZJv7OtDM8/kee8rQI0jTfZcWvms5Jk+zjyN5Plfu9tf9BNGnOjRpUamIni6lGlTpVMVVVONTEzpwUJ4ipGjGFJVK0oupNUoQpqUmqcIxtFf5PTnGpOdSFKGHhUnOcKFNzlCjCc3KNKDqOVRxppqMXOUptJc0nK7evWhIUAFABQAUAIwypHXIIwehyKAPxR0+78ffEPS57L4oeA7jxHc2k8FrAz/AAz0WB1ttNeW2ZLTUJfDM1zYMImY232BoFlBdWlXeJB8xxv4R+GPiLCrHjfgrhziedeNFOtm+ApYjF0lQjJUvq+LaWKwkoQqTipYWtRbUpXb5nf1eGPEXjrgydN8K8UZzkapOpall2Mq0aE/bSjKoq+Gi3QxEZyjGTjiKdSN4p20Oi0K38afD/w5eWvgXwHd6Ld31lPHqjWvwv0iSe8jkt5Y2hbU28PzatcLlmEMUtwEiEkmxCZN1cXBXgv4U+HmCzDL+C+BeG+HcPmuHqYTM5ZbgacMZmGFqxcJ4bGZjP2mPxFBxk0qNXEypxu+SMTq4l8SePeMMTg8bxPxVnWc1sBVhXwKxuLlLD4SvTalGthsJDlwlGreKbqU6EZysuZux+tfhAXi+E/DA1DcL8eHtFF8HjWFvtn9m232rdCiRrE3n78xKiLGfkVFACj7KMIUoqnSio06a5KcVtGEPdhFeUYpJeSPA5pT9+bcpz96cnvKUtZSfm222dFVAFABQAUAFABQB5nb2+YpSiPI9pNeIsKtt80pM67DnKZIiAUsGx26mvTeqi97xT/BHHhZezqOLahGU+VzlFS5EptPpzcqTasmu/S5ZiikXTTPIk0Ests2+3lk8xomIztdsYdxgdhgkjAJoW69Ub4ypD2kqVOVOrCnN8tenD2caita6i0mo9r272e56BGuyNF/uoq/kAK8xmi2XoPoGFABQAUAFABQB4rH4jktNa1rT2tlH2fVb9EcyN88bXUrozAqcHEnYkfSvoaeEVTDUaqlZypx0SW6ST++339zy5TtVnBractb23badrdV+d+ppTeIjLJa2v2dNt3d2tq7eY3yrcXEULEYXrhyV7bgM8ZNZywrjCpNtx5Kc5q63cYtrtYaa5krXu0tHvd+h6xXhHphQAUAFABQAUAFAHlWr/Dm6vNXvtVsda8j7dObh7ae3JETsBvCTo53IWGVUwqVBwWY8n2sNmyo0IUKmH5/ZpqM4ztzK7a5ouO6va6lZrotjjq4T2k3NTtzbrl8ktHf9CSx+H15Hd2s97rIkitbiG48qGAhpWhkWRULsyhAWUZOxzjgAHmnWzaFSlOEMPyucJQ5pTulzJptR5d7PutSYYSUZRcqjai07K+tteu34nqNeIdwUAFABQAUAFABQAUAFABQAUAFABQA/9k=",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "1230",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addBanner",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addBanner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Banner",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "banner",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "1230",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editBanner",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editBanner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Banner",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delBanner",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delBanner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Berita",
+			"item": [
+				{
+					"name": "Get Berita List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/berita",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"berita"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Berita Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/berita/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"berita",
+								"1"
+							]
+						},
+						"description": "type : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Berita",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"value": "/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABBAEEDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/igAoAq3NybcR4iaUyMVADBcYUt1PXgHAHOAT2q4R521e2l9myJy5Ena93bdL8yv9vcDJtXH/bRPw/zjA6ZrRUG/tL7mZuslvF/en+Vxp1F+1pI3rtkjyOn97bn6g496f1fvOK9VL9Exe3X8r+9Fq1uTcBy0TRNGwUozKx5UMDlcgZB6de/Qispw5Ha6lpe6uvzs/wADWE1NNpWs7alqoLCgAoAKACgDB8RvPBpj3VsGae1kWWJVRZC0jpJbxqI2lhWQl51wjSxK5wrSIpLh2qyhVhQnGnWnRqRo1Jxc4Qq8rdOcoJpzjGSTlFSi5JNKSvclunF05VYynSjVpurCDSnOnzJTjCTTUZSg2oyaai2m00rPip9V1sxXltZTTS6hbQ+HJ5p7jw1fDT1+1Tgap9iBuLOS7R7WB3nsop7rUdHkuA7m7Lw2UXi18Zm2JhiMoyzEUsPnuX08lr4nMswyXMHkeKhXrqWOpYOSrYenXrVcPh69N06GOrTy2eLwtSuqrSp1OmGHwVJ0sfiaU6uWYqeYQo4XDZhhf7Ro+yhy4eeKXs6sqUIVa1GSnUw1OOMjRrxpcms4Euo6lNOPsl1eR2dpr2oWmpSy+Hbr7SbOLTpGSC0YywedFHfSq1prNrp1/azpbw2U0csn2i9l1nmOMx9aFbLa8sFhMmzbF0M9pY7JcfKtmeHw2CqJ0conUnhW4PE16FejmOHo46jiXhp4alCfPOUZWFoYWnKni6ccRWzDBYepl1TDZhhfZ4OtWxEHzY+KjX5Zexp1ac8LVqYWrS9rGtVlFRjGXZ+GZ3u9Jgu5DOzXCxSF7q0axuWItoEc3Fk4VrS43oyz25VfKlV0CrjFd9DFwx+GwuNp08RSp4rDUcRCli6FTC4qlGtBVFTxGGrRjVoVoc3LUpVIqUJpxa0MpUJYWpWw850qk6NarSlUoVYVqM3Tm4c1KrTbhUpyteE4NxlFqSbTOgrUAoAKACgAoAwvE8AuPD2sxGXyA2nXRM+508gJG0nnb4pYZE8rb5m+OaJ127lkRgGGdWFGpRrU8RUnRw9WjWpV60KsqE6VGpTlCpUhXhKM6MoQk5RqwlGVNpTi00mXTlUhVpTowjUrQq050qc6aqwqVYTjKnCVKScasZSSi6bTU03Fpp2Pyu/aE/a18TeFNVu/Cfwv8LWmpWmnwaFFrXjl7rxLqllJq+iafHrk9pYT6bdaVHcXGjwIralqV9LLLd2trIuoWjWdvEY/8y/pR/S94x4QzPF8B+E/CmHzrI8jjljxXHuJrZ9j8O8flWChnuIweDq5Tjsu9rPK8PhqWJzHFYrMMVCpCjiVi8LOi5VJ/wBpeCX0deHuIsFhuKfEHiGplGZZssXLC8I4enlWCxP1PH4qeT4fE4inmGFxfs4ZhXqzoYChh8HQqKc6Lw9dVVGCw/gx+2P4x1/xn4Z8L/FnwfaW9nq2qNf6Zr+lQeJdDhgu9bMmhW11qmnG+vNOvNF1DVb8WE06WosIb29eR7WS6lkuY/n/AAP+m5xvxTxpwpwx43cG08FHH4qlX4Z4qySjnnDeFwuPzOo+H8uxHEWAnjMRgcwyLG4/MaeUyx6isLl+KxdKpVwlaS9pS9TxR+jHwrkXDGeZ/wCGfE0sWsFRnTzvIczq5VnOIrYbB0f7WxlLJ8VChQxOEzXD4PCTzCGDfNXxeGoVYxr04/u5/rV4V3Hw7pDNHDE8lnHK8VvPLdW8bykuyW9zOqTXECltsM0yJLJGFeRFclR/qnQli50MPPH0qNDGyw9B4uhh6sq+Ho4l0Ye3pUK86VGdajTq80adWdGlOpBKcqcG+VfwxONCNSrHC1KlXDKrVWHq1aapValFVJeynVpxnUjTqShyucI1KkYyuozkkpPoK1JCgAoAKACgCnqMSz6ffQMCyzWdzEyjOWEkLqQNpByQccEH0oTSabjzpO7hZPmS1cbPR821no76id7Oz5XbSWqs+jurtWet1qj+eT4tXT/Dnxx4m0TxPY38i+I9c1/xTa/2raPcPL4c8dwXTxT6fdWWqR6cmoGx1GTS9UvNItoIxc2d1aNd3q6fbW1f4VePGLwfhr4ica5Bxllua4apxNxHxRxLQwuOy2riKS4Z45oYy0MrxVDO1hsLj6eCzOrlGZYrLqFJxr4Sth54rHRwGGox/wBUPDLBYzjvg/hbNeGMbltejkOQ5BkNXFYTH06U5Z7wjVw7c8fQrZW8RXwVTEYOnmWBw+NrVlOliaNenh8H9ar1TM+H9/rPxU8U6J4F8PSMLnWpLTSbOzg0yaWDQLKw8SR+I21u31Se7e502KysbSOPVrmSG8WWxsbdbqz1a/trLULb4fw+zbEeL/F/D/h3w1isw9tnFfA5VhcNh+H3iaHDmW5fxVQ4lnxDh8xxWZyxOXRwOCw1OlmuJrRxFOthsBg4YrD5rjKWEx2H9TjHK6fhzw/mnFueYTB+yy6GIx+IxFXOfY1c5xuL4fq5HHKq+Bo4GNHHSxGKr1KuX0oSoSpV8ViZ0MRl+Gq4nCVv6I9ASWPQ9IWZ5ZJv7OtDM8/kee8rQI0jTfZcWvms5Jk+zjyN5Plfu9tf9BNGnOjRpUamIni6lGlTpVMVVVONTEzpwUJ4ipGjGFJVK0oupNUoQpqUmqcIxtFf5PTnGpOdSFKGHhUnOcKFNzlCjCc3KNKDqOVRxppqMXOUptJc0nK7evWhIUAFABQAUAIwypHXIIwehyKAPxR0+78ffEPS57L4oeA7jxHc2k8FrAz/AAz0WB1ttNeW2ZLTUJfDM1zYMImY232BoFlBdWlXeJB8xxv4R+GPiLCrHjfgrhziedeNFOtm+ApYjF0lQjJUvq+LaWKwkoQqTipYWtRbUpXb5nf1eGPEXjrgydN8K8UZzkapOpall2Mq0aE/bSjKoq+Gi3QxEZyjGTjiKdSN4p20Oi0K38afD/w5eWvgXwHd6Ld31lPHqjWvwv0iSe8jkt5Y2hbU28PzatcLlmEMUtwEiEkmxCZN1cXBXgv4U+HmCzDL+C+BeG+HcPmuHqYTM5ZbgacMZmGFqxcJ4bGZjP2mPxFBxk0qNXEypxu+SMTq4l8SePeMMTg8bxPxVnWc1sBVhXwKxuLlLD4SvTalGthsJDlwlGreKbqU6EZysuZux+tfhAXi+E/DA1DcL8eHtFF8HjWFvtn9m232rdCiRrE3n78xKiLGfkVFACj7KMIUoqnSio06a5KcVtGEPdhFeUYpJeSPA5pT9+bcpz96cnvKUtZSfm222dFVAFABQAUAFABQB5nb2+YpSiPI9pNeIsKtt80pM67DnKZIiAUsGx26mvTeqi97xT/BHHhZezqOLahGU+VzlFS5EptPpzcqTasmu/S5ZiikXTTPIk0Ests2+3lk8xomIztdsYdxgdhgkjAJoW69Ub4ypD2kqVOVOrCnN8tenD2caita6i0mo9r272e56BGuyNF/uoq/kAK8xmi2XoPoGFABQAUAFABQB4rH4jktNa1rT2tlH2fVb9EcyN88bXUrozAqcHEnYkfSvoaeEVTDUaqlZypx0SW6ST++339zy5TtVnBractb23badrdV+d+ppTeIjLJa2v2dNt3d2tq7eY3yrcXEULEYXrhyV7bgM8ZNZywrjCpNtx5Kc5q63cYtrtYaa5krXu0tHvd+h6xXhHphQAUAFABQAUAFAHlWr/Dm6vNXvtVsda8j7dObh7ae3JETsBvCTo53IWGVUwqVBwWY8n2sNmyo0IUKmH5/ZpqM4ztzK7a5ouO6va6lZrotjjq4T2k3NTtzbrl8ktHf9CSx+H15Hd2s97rIkitbiG48qGAhpWhkWRULsyhAWUZOxzjgAHmnWzaFSlOEMPyucJQ5pTulzJptR5d7PutSYYSUZRcqjai07K+tteu34nqNeIdwUAFABQAUAFABQAUAFABQAUAFABQA/9k=",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addBerita",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addBerita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Berita",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delBerita",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delBerita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Berita",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editBerita",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editBerita"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CDC",
+			"item": [
+				{
+					"name": "Get CDC List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "II",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/loker",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"loker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CDC Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "user",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "xjdxzMhvauIrEkL33CnQflArtcNbB3c1",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "alumni2@gmail.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/loker/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"loker",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CDC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "tes.com",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2021-01-03 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2021-01-30 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addCDC",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addCDC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit CDC",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "tes.com",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-01-03 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2022-01-30 23:59:59",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editCDC",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editCDC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete CDC",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delCDC",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delCDC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get Category List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "jenis",
+								"value": "loker",
+								"type": "text"
+							},
+							{
+								"key": "jenis",
+								"value": "berita",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "jenis",
+								"value": "announce",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/category",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"category"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>\r\njenis itu untuk masing2 kategori dari menu dibawah : <br>\r\nloker = cdc <br>\r\nberita = berita <br>\r\nannounce = pengumuman <br>"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "web"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "admin",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/category/3",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Tes",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "loker",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addCategory",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Tes 2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "loker",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editCategory",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delCategory",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jurusan",
+			"item": [
+				{
+					"name": "Get Jurusan List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "nis",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/jurusan",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"jurusan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jurusan Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/jurusan/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"jurusan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Jurusan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_jurusan",
+									"value": "tes 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addJurusan",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addJurusan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Jurusan",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_jurusan",
+									"value": "tes 4",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editJurusan",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editJurusan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jurusan",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delJurusan",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delJurusan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prodi",
+			"item": [
+				{
+					"name": "Get Prodi List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "limit",
+								"type": "text",
+								"value": "2"
+							},
+							{
+								"key": "offset",
+								"type": "text",
+								"value": "0"
+							},
+							{
+								"key": "search",
+								"type": "text",
+								"value": "ni"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "web"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "admin",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/prodi/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"prodi",
+								"1"
+							]
+						},
+						"description": "show all => gk usah dikasih limit dan offset, search gk dikasih <br>\r\ntype : <br>\r\nweb = untuk web biasa <br>\r\nadmin = untuk CMS <br>\r\nadmin butuh token yang digenerate hasil login <br>\r\nrequest => prodi/{id_jurusan}"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Prodi Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/prodi/1/1",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"prodi",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Prodi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_jurusan",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "nama_prodi",
+									"value": "Tes Prodi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addProdi",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addProdi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Prodi",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_jurusan",
+									"value": " 3",
+									"type": "text"
+								},
+								{
+									"key": "nama_prodi",
+									"value": "Tes Prodi 4",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editProdi",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editProdi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Prodi",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delProdi",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delProdi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pengumuman",
+			"item": [
+				{
+					"name": "Get Pengumuman List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							},
+							{
+								"key": "limit",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "offset",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "search",
+								"value": "ni",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/pengumuman",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"pengumuman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pengumuman Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"value": "web",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/pengumuman/2",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"pengumuman",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Pengumuman",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"value": "/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABBAEEDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/igAoAq3NybcR4iaUyMVADBcYUt1PXgHAHOAT2q4R521e2l9myJy5Ena93bdL8yv9vcDJtXH/bRPw/zjA6ZrRUG/tL7mZuslvF/en+Vxp1F+1pI3rtkjyOn97bn6g496f1fvOK9VL9Exe3X8r+9Fq1uTcBy0TRNGwUozKx5UMDlcgZB6de/Qispw5Ha6lpe6uvzs/wADWE1NNpWs7alqoLCgAoAKACgDB8RvPBpj3VsGae1kWWJVRZC0jpJbxqI2lhWQl51wjSxK5wrSIpLh2qyhVhQnGnWnRqRo1Jxc4Qq8rdOcoJpzjGSTlFSi5JNKSvclunF05VYynSjVpurCDSnOnzJTjCTTUZSg2oyaai2m00rPip9V1sxXltZTTS6hbQ+HJ5p7jw1fDT1+1Tgap9iBuLOS7R7WB3nsop7rUdHkuA7m7Lw2UXi18Zm2JhiMoyzEUsPnuX08lr4nMswyXMHkeKhXrqWOpYOSrYenXrVcPh69N06GOrTy2eLwtSuqrSp1OmGHwVJ0sfiaU6uWYqeYQo4XDZhhf7Ro+yhy4eeKXs6sqUIVa1GSnUw1OOMjRrxpcms4Euo6lNOPsl1eR2dpr2oWmpSy+Hbr7SbOLTpGSC0YywedFHfSq1prNrp1/azpbw2U0csn2i9l1nmOMx9aFbLa8sFhMmzbF0M9pY7JcfKtmeHw2CqJ0conUnhW4PE16FejmOHo46jiXhp4alCfPOUZWFoYWnKni6ccRWzDBYepl1TDZhhfZ4OtWxEHzY+KjX5Zexp1ac8LVqYWrS9rGtVlFRjGXZ+GZ3u9Jgu5DOzXCxSF7q0axuWItoEc3Fk4VrS43oyz25VfKlV0CrjFd9DFwx+GwuNp08RSp4rDUcRCli6FTC4qlGtBVFTxGGrRjVoVoc3LUpVIqUJpxa0MpUJYWpWw850qk6NarSlUoVYVqM3Tm4c1KrTbhUpyteE4NxlFqSbTOgrUAoAKACgAoAwvE8AuPD2sxGXyA2nXRM+508gJG0nnb4pYZE8rb5m+OaJ127lkRgGGdWFGpRrU8RUnRw9WjWpV60KsqE6VGpTlCpUhXhKM6MoQk5RqwlGVNpTi00mXTlUhVpTowjUrQq050qc6aqwqVYTjKnCVKScasZSSi6bTU03Fpp2Pyu/aE/a18TeFNVu/Cfwv8LWmpWmnwaFFrXjl7rxLqllJq+iafHrk9pYT6bdaVHcXGjwIralqV9LLLd2trIuoWjWdvEY/8y/pR/S94x4QzPF8B+E/CmHzrI8jjljxXHuJrZ9j8O8flWChnuIweDq5Tjsu9rPK8PhqWJzHFYrMMVCpCjiVi8LOi5VJ/wBpeCX0deHuIsFhuKfEHiGplGZZssXLC8I4enlWCxP1PH4qeT4fE4inmGFxfs4ZhXqzoYChh8HQqKc6Lw9dVVGCw/gx+2P4x1/xn4Z8L/FnwfaW9nq2qNf6Zr+lQeJdDhgu9bMmhW11qmnG+vNOvNF1DVb8WE06WosIb29eR7WS6lkuY/n/AAP+m5xvxTxpwpwx43cG08FHH4qlX4Z4qySjnnDeFwuPzOo+H8uxHEWAnjMRgcwyLG4/MaeUyx6isLl+KxdKpVwlaS9pS9TxR+jHwrkXDGeZ/wCGfE0sWsFRnTzvIczq5VnOIrYbB0f7WxlLJ8VChQxOEzXD4PCTzCGDfNXxeGoVYxr04/u5/rV4V3Hw7pDNHDE8lnHK8VvPLdW8bykuyW9zOqTXECltsM0yJLJGFeRFclR/qnQli50MPPH0qNDGyw9B4uhh6sq+Ho4l0Ye3pUK86VGdajTq80adWdGlOpBKcqcG+VfwxONCNSrHC1KlXDKrVWHq1aapValFVJeynVpxnUjTqShyucI1KkYyuozkkpPoK1JCgAoAKACgCnqMSz6ffQMCyzWdzEyjOWEkLqQNpByQccEH0oTSabjzpO7hZPmS1cbPR821no76id7Oz5XbSWqs+jurtWet1qj+eT4tXT/Dnxx4m0TxPY38i+I9c1/xTa/2raPcPL4c8dwXTxT6fdWWqR6cmoGx1GTS9UvNItoIxc2d1aNd3q6fbW1f4VePGLwfhr4ica5Bxllua4apxNxHxRxLQwuOy2riKS4Z45oYy0MrxVDO1hsLj6eCzOrlGZYrLqFJxr4Sth54rHRwGGox/wBUPDLBYzjvg/hbNeGMbltejkOQ5BkNXFYTH06U5Z7wjVw7c8fQrZW8RXwVTEYOnmWBw+NrVlOliaNenh8H9ar1TM+H9/rPxU8U6J4F8PSMLnWpLTSbOzg0yaWDQLKw8SR+I21u31Se7e502KysbSOPVrmSG8WWxsbdbqz1a/trLULb4fw+zbEeL/F/D/h3w1isw9tnFfA5VhcNh+H3iaHDmW5fxVQ4lnxDh8xxWZyxOXRwOCw1OlmuJrRxFOthsBg4YrD5rjKWEx2H9TjHK6fhzw/mnFueYTB+yy6GIx+IxFXOfY1c5xuL4fq5HHKq+Bo4GNHHSxGKr1KuX0oSoSpV8ViZ0MRl+Gq4nCVv6I9ASWPQ9IWZ5ZJv7OtDM8/kee8rQI0jTfZcWvms5Jk+zjyN5Plfu9tf9BNGnOjRpUamIni6lGlTpVMVVVONTEzpwUJ4ipGjGFJVK0oupNUoQpqUmqcIxtFf5PTnGpOdSFKGHhUnOcKFNzlCjCc3KNKDqOVRxppqMXOUptJc0nK7evWhIUAFABQAUAIwypHXIIwehyKAPxR0+78ffEPS57L4oeA7jxHc2k8FrAz/AAz0WB1ttNeW2ZLTUJfDM1zYMImY232BoFlBdWlXeJB8xxv4R+GPiLCrHjfgrhziedeNFOtm+ApYjF0lQjJUvq+LaWKwkoQqTipYWtRbUpXb5nf1eGPEXjrgydN8K8UZzkapOpall2Mq0aE/bSjKoq+Gi3QxEZyjGTjiKdSN4p20Oi0K38afD/w5eWvgXwHd6Ld31lPHqjWvwv0iSe8jkt5Y2hbU28PzatcLlmEMUtwEiEkmxCZN1cXBXgv4U+HmCzDL+C+BeG+HcPmuHqYTM5ZbgacMZmGFqxcJ4bGZjP2mPxFBxk0qNXEypxu+SMTq4l8SePeMMTg8bxPxVnWc1sBVhXwKxuLlLD4SvTalGthsJDlwlGreKbqU6EZysuZux+tfhAXi+E/DA1DcL8eHtFF8HjWFvtn9m232rdCiRrE3n78xKiLGfkVFACj7KMIUoqnSio06a5KcVtGEPdhFeUYpJeSPA5pT9+bcpz96cnvKUtZSfm222dFVAFABQAUAFABQB5nb2+YpSiPI9pNeIsKtt80pM67DnKZIiAUsGx26mvTeqi97xT/BHHhZezqOLahGU+VzlFS5EptPpzcqTasmu/S5ZiikXTTPIk0Ests2+3lk8xomIztdsYdxgdhgkjAJoW69Ub4ypD2kqVOVOrCnN8tenD2caita6i0mo9r272e56BGuyNF/uoq/kAK8xmi2XoPoGFABQAUAFABQB4rH4jktNa1rT2tlH2fVb9EcyN88bXUrozAqcHEnYkfSvoaeEVTDUaqlZypx0SW6ST++339zy5TtVnBractb23badrdV+d+ppTeIjLJa2v2dNt3d2tq7eY3yrcXEULEYXrhyV7bgM8ZNZywrjCpNtx5Kc5q63cYtrtYaa5krXu0tHvd+h6xXhHphQAUAFABQAUAFAHlWr/Dm6vNXvtVsda8j7dObh7ae3JETsBvCTo53IWGVUwqVBwWY8n2sNmyo0IUKmH5/ZpqM4ztzK7a5ouO6va6lZrotjjq4T2k3NTtzbrl8ktHf9CSx+H15Hd2s97rIkitbiG48qGAhpWhkWRULsyhAWUZOxzjgAHmnWzaFSlOEMPyucJQ5pTulzJptR5d7PutSYYSUZRcqjai07K+tteu34nqNeIdwUAFABQAUAFABQAUAFABQAUAFABQA/9k=",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/addPengumuman",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"addPengumuman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Pengumuman",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"type": "text",
+								"value": "mramadhan032@gmail.com"
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP"
+							},
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "foto",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "judul",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "review_singkat",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "isi",
+									"value": "tes 3",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/editPengumuman",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"editPengumuman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pengumuman",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "mramadhan032@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "LSKnx4IPbHtQBvKAdj5kJcGNLkfh6ZVP",
+								"type": "text"
+							},
+							{
+								"key": "apiToken",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_WEB}}/delPengumuman",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"delPengumuman"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alumni",
+			"item": [
+				{
+					"name": "Get Profil",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiToken",
+								"type": "text",
+								"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "user"
+							},
+							{
+								"key": "type",
+								"type": "text",
+								"value": "admin",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"type": "text",
+								"value": "xjdxzMhvauIrEkL33CnQflArtcNbB3c1"
+							},
+							{
+								"key": "email",
+								"type": "text",
+								"value": "alumni2@gmail.com"
+							}
+						],
+						"url": {
+							"raw": "{{URL_WEB}}/profile",
+							"host": [
+								"{{URL_WEB}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiToken",
+						"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alumni2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qweasd123",
+							"type": "text"
+						},
+						{
+							"key": "mode",
+							"value": "userWeb",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL_WEB}}/login",
+					"host": [
+						"{{URL_WEB}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiToken",
+						"type": "text",
+						"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mail3@tester.com",
+							"type": "text"
+						},
+						{
+							"key": "nama_alumni",
+							"value": "Ramadhan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jakarta",
+							"type": "text"
+						},
+						{
+							"key": "angkatan",
+							"value": "2013",
+							"type": "text"
+						},
+						{
+							"key": "negara_id",
+							"value": "ID",
+							"type": "text"
+						},
+						{
+							"key": "hobi",
+							"value": "tidur",
+							"type": "text"
+						},
+						{
+							"key": "profesi_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nama_profesi",
+							"value": "Kepala Bagian",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_pegawai",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "pendapatan",
+							"value": "5 Juta - 50 Juta",
+							"type": "text"
+						},
+						{
+							"key": "foto_ktp",
+							"value": "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",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "jurusan_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "prodi_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "mode",
+							"value": "userWeb",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL_WEB}}/register",
+					"host": [
+						"{{URL_WEB}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profesi List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiToken",
+						"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+						"type": "text"
+					},
+					{
+						"key": "limit",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "offset",
+						"value": "0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "search",
+						"value": "ni",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "type",
+						"value": "web",
+						"type": "text"
+					},
+					{
+						"key": "type",
+						"value": "admin",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{URL_WEB}}/profesi",
+					"host": [
+						"{{URL_WEB}}"
+					],
+					"path": [
+						"profesi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "apiToken",
+						"type": "text",
+						"value": "aWthcHVuaWphMjAyMXhhZmxvd3pAMTIxMzEwIV89"
+					},
+					{
+						"key": "type",
+						"type": "text",
+						"value": "user"
+					},
+					{
+						"key": "type",
+						"type": "text",
+						"value": "admin",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "xjdxzMhvauIrEkL33CnQflArtcNbB3c1"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "alumni2@gmail.com"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{URL_WEB}}/logout",
+					"host": [
+						"{{URL_WEB}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
