@@ -27,11 +27,13 @@
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/laravel/helpers" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/namshi/jose" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/nunomaduro/collision" />
@@ -100,6 +102,7 @@
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/tymon/jwt-auth" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/web_ikapunija/vendor/webmozart/assert" />
