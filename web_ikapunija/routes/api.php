@@ -146,8 +146,11 @@ Route::delete('deleteDeclineAlumni','API\UserAlumniController@declineAlumni');
 Route::group(['prefix' => 'mobile'], function () {
     Route::group(['prefix' => 'auth'], function () {
 
-        Route::post('/login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
-        Route::post('/register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
+        Route::post('login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
+        Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
+        Route::post('forgotPassword','API\Mobile\AuthController@forgotPassword');
+        Route::post('verifyForgotPassword','API\Mobile\AuthController@verifyForgotPassword');
+        Route::post('updatePassword','API\Mobile\AuthController@updatePassword');
 
         Route::group(['middleware' => 'jwt.verify'], function () {
             Route::get('/user',function(){

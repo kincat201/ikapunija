@@ -37,7 +37,7 @@ class AuthController extends Controller
         ])->first();
 
         if(empty($user)){
-            return response()->json(ResponseService::ResponseError('invalid email or password'),200);
+            return response()->json(ResponseService::ResponseError('Email atau password salah, jika pernah mengisi data melalui gform silahkan reset password dengan fitur lupa password'),200);
         }
 
         try {
@@ -99,6 +99,72 @@ class AuthController extends Controller
         }
 
         return response()->json(compact('user'));
+    }
+
+    public function forgotPassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email'=> 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
+        }
+
+        $user = UserAlumni::where('email',$request->email)->where('is_active','Y')->first();
+        if(empty($user->id)) return response()->json(ResponseService::ResponseError('Email Yang Anda Masukkan Tidak Terdaftar'),200);
+
+        UserService::SendForgotPassword($user);
+
+        return response()->json(ResponseService::ResponseSuccess('Pengaturan reset password telah dikirimkan ke email anda.',['email'=>$user->email]));
+    }
+
+    public function verifyForgotPassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email'=> 'required',
+            'verify_code'=> 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
+        }
+
+        $data = UserAlumni::where('email',$request->email)->where('is_active','Y')->first();
+        if(empty($data->id)) return response()->json(ResponseService::ResponseError('Akun Tidak Tersedia'),200);
+
+        $verifyPassword = UserService::VerifyForgotPassword($data,$request->verify_code);
+
+        if($verifyPassword['status']){
+            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+        }else{
+            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+        }
+
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|max:255',
+            'verify_code' => 'required',
+            'password'=> 'required|confirmed|min:6'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
+        }
+
+        $data = UserAlumni::where('email',$request->email)->where('is_active','B')->first();
+        if(empty($data->id)) return response()->json(ResponseService::ResponseError('Akun Tidak Tersedia'),200);
+
+        $verifyPassword = UserService::UpdateForgotPassword($data,$request->verify_code,$request->password);
+
+        if($verifyPassword['status']){
+            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+        }else{
+            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+        }
     }
 }
 
