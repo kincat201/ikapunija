@@ -147,6 +147,7 @@ Route::group(['prefix' => 'mobile'], function () {
     Route::group(['prefix' => 'auth'], function () {
 
         Route::post('/login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
+        Route::post('/register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
 
         Route::group(['middleware' => 'jwt.verify'], function () {
             Route::get('/user',function(){

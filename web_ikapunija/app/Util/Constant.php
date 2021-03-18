@@ -12,4 +12,7 @@ class Constant {
         self::COMMON_NO => 'NO',
     ];
 
+    const USER_LOG_ADMIN_MODE = 'admin';
+    const USER_LOG_USER_MODE = 'user';
+
 }

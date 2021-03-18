@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API\Mobile;
 
 use App\Http\Controllers\Controller;
 use App\Service\ResponseService;
+use App\Service\UserService;
+use App\Util\Constant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -45,6 +47,8 @@ class AuthController extends Controller
         } catch (JWTException $e) {
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
+
+        UserService::GenerateUserLog($user->id,$user->email,Constant::USER_LOG_USER_MODE,str_random(32));
 
         return response()->json(compact('token','user'));
     }

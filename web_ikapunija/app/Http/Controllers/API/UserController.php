@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Service\UserService;
+use App\Util\Constant;
 use Illuminate\Http\Request;
 use App\Libraries\UtilityAPI;
 use Illuminate\Support\Facades\Mail;
@@ -61,7 +63,7 @@ class UserController extends Controller
                 { 
                     $errorCode = 200;
                     $msg = 'Success Login';
-                    $type = $parameter['type'] == 'userWeb' ? 'user' : 'admin';
+                    $type = $parameter['type'] == 'userWeb' ? Constant::USER_LOG_USER_MODE : Constant::USER_LOG_ADMIN_MODE;
                 }
 
                 else
@@ -90,38 +92,7 @@ class UserController extends Controller
             $res['user_type']    = $type;
             $res['token']        = str_random(32);
 
-            $dataLog = UserAccess::where('email',$input['email'])
-            ->where('mode', $type)
-            ->first();
-            
-            $code = rand(100000,999999);
-            if($dataLog !== null) {
-                DB::table('user_logs')
-                    ->where('email', $input['email'])
-                    ->update([
-                        'token'         => $res['token'],
-                        'mode'          => $res['user_type'],
-                        'updated_at'    => date("Y-m-d H:i:s"),
-                        'last_login'    => date("Y-m-d H:i:s"),
-                        'status'        => 'active',
-                        'active_code'   => md5($code)
-                    ]);
-            }
-
-            else {
-                DB::table('user_logs')
-                    ->insertOrIgnore([
-                        'email'       => $res['email'],
-                        'token'       => $res['token'],
-                        'id_user'     => $data->id,
-                        'mode'        => $res['user_type'],
-                        'created_at'  => date("Y-m-d H:i:s"),
-                        'updated_at'  => date("Y-m-d H:i:s"),
-                        'last_login'  => date("Y-m-d H:i:s"),
-                        'status'      => 'active',
-                        'active_code' => md5($code)
-                    ]);
-            }
+            UserService::GenerateUserLog($data->id,$res['email'],$res['user_type'],$res['token']);
 
             $error      = false;
             $dataResp   = UserAccess::where('email',$input['email']);
