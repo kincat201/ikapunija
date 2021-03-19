@@ -50,7 +50,7 @@ class AuthController extends Controller
 
         UserService::GenerateUserLog($user->id,$user->email,Constant::USER_LOG_USER_MODE,str_random(32));
 
-        return response()->json(compact('token','user'));
+        return response()->json(ResponseService::ResponseSuccess('Berhasil registrasi.',compact('user','token')));
     }
 
     public function register(Request $request)
@@ -73,7 +73,7 @@ class AuthController extends Controller
 
         $token = JWTAuth::fromUser($user);
 
-        return response()->json(compact('user','token'),201);
+        return response()->json(ResponseService::ResponseSuccess('Berhasil registrasi.',compact('user','token')));
     }
 
     public function getAuthenticatedUser()
@@ -136,7 +136,7 @@ class AuthController extends Controller
         $verifyPassword = UserService::VerifyForgotPassword($data,$request->verify_code);
 
         if($verifyPassword['status']){
-            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+            return response()->json(ResponseService::ResponseSuccess($verifyPassword['message']),200);
         }else{
             return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
         }
@@ -161,7 +161,7 @@ class AuthController extends Controller
         $verifyPassword = UserService::UpdateForgotPassword($data,$request->verify_code,$request->password);
 
         if($verifyPassword['status']){
-            return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
+            return response()->json(ResponseService::ResponseSuccess($verifyPassword['message']),200);
         }else{
             return response()->json(ResponseService::ResponseError($verifyPassword['message']),200);
         }
