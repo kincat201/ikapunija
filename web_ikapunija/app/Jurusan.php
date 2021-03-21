@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Util\Constant;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Libraries\UtilityDB;
@@ -49,5 +50,10 @@ class Jurusan extends Model
         $utility = new UtilityDB();
         $utility = $utility->excludeTable($query, $arrTable, $columns);
         return $utility;
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('jurusan.is_active', Constant::COMMON_YES);
     }
 }

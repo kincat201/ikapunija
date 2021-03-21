@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Util\Constant;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Libraries\UtilityDB;
@@ -19,7 +20,6 @@ class Prodi extends Model
         'id',
         'nama_prodi',
         'id_jurusan',
-        
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -27,7 +27,7 @@ class Prodi extends Model
      * @var array
      */
     protected $hidden = [
-        'created_at', 'updated_at', 'is_active', 'id_jurusan',
+        'created_at', 'updated_at', 'is_active',
     ];
 
     /**
@@ -48,5 +48,10 @@ class Prodi extends Model
         $utility = new UtilityDB();
         $utility = $utility->excludeTable($query, $arrTable, $columns);
         return $utility;
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('prodi.is_active', Constant::COMMON_YES);
     }
 }

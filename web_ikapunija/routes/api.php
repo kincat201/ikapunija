@@ -183,7 +183,11 @@ Route::group(['prefix' => 'mobile'], function () {
 // public API
 
 Route::group(['prefix' => 'public'], function () {
+
     Route::post('getInterest','API\PublicController@interestList');
+    Route::post('getProfession','API\PublicController@professionList');
+    Route::post('getFaculty','API\PublicController@facultyList');
+    Route::post('getProgramStudy','API\PublicController@programStudyList');
 
 });
 
