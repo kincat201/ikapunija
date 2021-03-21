@@ -150,9 +150,9 @@ Route::group(['prefix' => 'mobile'], function () {
         Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
         Route::post('login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
         Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
-        Route::post('forgotPassword','API\Mobile\AuthController@forgotPassword');
-        Route::post('verifyForgotPassword','API\Mobile\AuthController@verifyForgotPassword');
-        Route::post('updatePassword','API\Mobile\AuthController@updatePassword');
+        Route::post('forgotPassword','API\Mobile\AuthController@forgotPassword')->name('mobile.auth.forgot');
+        Route::post('verifyForgotPassword','API\Mobile\AuthController@verifyForgotPassword')->name('mobile.auth.verify-forgot');
+        Route::post('updatePassword','API\Mobile\AuthController@updatePassword')->name('mobile.auth.forgot-update-password');
     });
 
     Route::group(['middleware' => 'jwt.verify'], function () {
