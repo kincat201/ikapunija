@@ -3,18 +3,16 @@
 namespace App\Http\Controllers\API\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\InterestAlumni;
 use App\Service\ResponseService;
 use App\Service\UserService;
 use App\Util\Constant;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use App\Libraries\UtilityAPI;
 use App\UserAlumni;
-use App\UserAccess;
-use App\UserAdmin;
 use DB;
 
 class AuthController extends Controller
@@ -31,13 +29,21 @@ class AuthController extends Controller
             return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
         }
 
-        $user = UserAlumni::where([
+        $user = UserAlumni::with(['country','province','city','jurusan','prodi','interests.interest'])->where([
             'email' => $request->email,
             'password' => md5($request->password)
         ])->first();
 
         if(empty($user)){
             return response()->json(ResponseService::ResponseError('Email atau password salah, jika pernah mengisi data melalui gform silahkan reset password dengan fitur lupa password'),200);
+        }
+
+        if($user->is_active == Constant::ACTIVE_STATUS_VERIFICATION){
+            return response()->json(ResponseService::ResponseError('Akun anda belum diverifikasi, mohon verifikasi di email anda!'),200);
+        }
+
+        if($user->is_active != Constant::ACTIVE_STATUS_YES){
+            return response()->json(ResponseService::ResponseError('Akun anda berstatus '.Constant::ACTIVE_STATUS_LIST[$user->is_active].', mohon hubungi admin!'),200);
         }
 
         try {
@@ -50,30 +56,67 @@ class AuthController extends Controller
 
         UserService::GenerateUserLog($user->id,$user->email,Constant::USER_LOG_USER_MODE,str_random(32));
 
-        return response()->json(ResponseService::ResponseSuccess('Berhasil registrasi.',compact('user','token')));
+        return response()->json(ResponseService::ResponseSuccess('Berhasil authentikasi.',compact('user','token')));
     }
 
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+        $validate_rule = [
+            'email'         => 'required|email|unique:user_alumni,email',
+            'password'      => 'required|min:6',
+            'nama_alumni'   => 'required',
+            'angkatan'      => 'required|numeric',
+            'jurusan_id'    => 'required',
+            'negara_id'      => 'required',
+            'prodi_id'      => 'required',
+            'profesi_id'    => 'required',
+            'interest_list'    => 'required|array|min:1',
+            'last_education'    => 'required',
+        ];
 
-        if($validator->fails()){
-            return response()->json($validator->errors()->toJson(), 400);
+        if($request->has('photo')){
+            $validate_rule['photo'] = 'max:9600|image';
         }
 
-        $user = User::create([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'password' => Hash::make($request->get('password')),
-        ]);
+        $validator = Validator::make($request->all(), $validate_rule);
 
-        $token = JWTAuth::fromUser($user);
+        if($validator->fails()){
+            return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
+        }
 
-        return response()->json(ResponseService::ResponseSuccess('Berhasil registrasi.',compact('user','token')));
+        \DB::beginTransaction();
+
+        try{
+            $alumni = new UserAlumni();
+            $alumni->fill((array) $request->all());
+            $alumni->password = md5($request->password);
+            $alumni->active_code = md5(date("Y-m-d H:i:s"));
+            $alumni->is_active = Constant::ACTIVE_STATUS_VERIFICATION;
+            $alumni->save();
+
+            $alumniIntereset = [];
+            foreach ($request->interest_list as $interest){
+                $alumniIntereset[]=[
+                    'alumni_id'=>$alumni->id,
+                    'interest_id'=>$interest,
+                    'created_at'=>Carbon::now(),
+                    'updated_at'=>Carbon::now(),
+                ];
+            }
+
+            InterestAlumni::insert($alumniIntereset);
+
+            UserService::SendVerificationNewAlumni($alumni);
+
+            \DB::commit();
+
+            return response()->json(ResponseService::ResponseSuccess('Berhasil registrasi, mohon verifikasi email anda!',['email'=>$alumni->email]));
+
+        } catch (\Exception $e){
+            \Log::info($e);
+            \DB::rollback();
+            return response()->json(ResponseService::ResponseError('Gagal Registrasi mohon coba lagi nanti!'),500);
+        }
     }
 
     public function getAuthenticatedUser()

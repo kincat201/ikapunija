@@ -122,5 +122,18 @@ class UserService {
         }
     }
 
+    public static function SendVerificationNewAlumni($data){
+        $dataUser = array(
+            'name'      => $data->nama_alumni,
+            'code'      => $data->active_code,
+            'email'     => $data->email,
+            'subject'   => 'Verifikasi Akun',
+            'perihal'   => 'untuk verifikasi akun di Website Ikapunija',
+        );
+
+        return Mail::to($data->email)
+            ->send(new SendMail($dataUser));
+    }
+
 
 }

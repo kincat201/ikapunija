@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Service\UserService;
 use Illuminate\Http\Request;
 use App\Libraries\UtilityAPI;
 use Illuminate\Support\Facades\Mail;
@@ -335,7 +336,9 @@ class UserAlumniController extends Controller
         
                         Mail::to($input['email'])
                         ->send(new SendMail($dataUser));
-                        $msg = 'Register Success, Please check your email !';  
+                        $msg = 'Register Success, Please check your email !';
+
+                        UserService::SendVerificationNewAlumni($data_user);
                     }
                 }
 

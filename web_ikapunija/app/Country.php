@@ -26,4 +26,16 @@ class Country extends Model
     protected $hidden = [
         'created_at', 'updated_at'
     ];
+
+    public function city(){
+        return $this->hasMany(City::class,'city_id','id');
+    }
+
+    public function province(){
+        return $this->hasMany(Province::class,'province_id','id');
+    }
+
+    public function alumni(){
+        return $this->hasMany(UserAlumni::class,'province_id','id');
+    }
 }

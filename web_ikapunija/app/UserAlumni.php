@@ -41,6 +41,11 @@ class UserAlumni extends Authenticatable implements JWTSubject
         'foto_ktp',
         'foto_profil',
         'nik',
+        'province_id',
+        'city_id',
+        'city_other',
+        'company',
+        'last_education',
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -81,5 +86,21 @@ class UserAlumni extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function interests(){
+        return $this->hasMany(InterestAlumni::class,'alumni_id','id');
+    }
+
+    public function country(){
+        return $this->belongsTo(Country::class,'negara_id','id');
+    }
+
+    public function province(){
+        return $this->belongsTo(Province::class,'province_id','id');
+    }
+
+    public function city(){
+        return $this->belongsTo(City::class,'city_id','id');
     }
 }

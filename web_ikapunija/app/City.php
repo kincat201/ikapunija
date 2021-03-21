@@ -28,4 +28,16 @@ class City extends Model
     protected $hidden = [
         'created_at', 'updated_at'
     ];
+
+    public function country(){
+        return $this->belongsTo(Country::class,'country_id','id');
+    }
+
+    public function province(){
+        return $this->belongsTo(Province::class,'province_id','id');
+    }
+
+    public function alumni(){
+        return $this->hasMany(UserAlumni::class,'city_id','id');
+    }
 }

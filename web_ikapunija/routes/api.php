@@ -146,6 +146,7 @@ Route::delete('deleteDeclineAlumni','API\UserAlumniController@declineAlumni');
 Route::group(['prefix' => 'mobile'], function () {
     Route::group(['prefix' => 'auth'], function () {
 
+        Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
         Route::post('login', 'API\Mobile\AuthController@login')->name('mobile.auth.login');
         Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
         Route::post('forgotPassword','API\Mobile\AuthController@forgotPassword');
