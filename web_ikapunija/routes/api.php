@@ -184,10 +184,15 @@ Route::group(['prefix' => 'mobile'], function () {
 
 Route::group(['prefix' => 'public'], function () {
 
-    Route::post('getInterest','API\PublicController@interestList');
-    Route::post('getProfession','API\PublicController@professionList');
-    Route::post('getFaculty','API\PublicController@facultyList');
-    Route::post('getProgramStudy','API\PublicController@programStudyList');
+    Route::post('getInterest','API\PublicController@interestList')->name('public.interest.list');
+    Route::post('getProfession','API\PublicController@professionList')->name('public.profession.list');
+    Route::post('getFaculty','API\PublicController@facultyList')->name('public.faculty.list');
+    Route::post('getProgramStudy','API\PublicController@programStudyList')->name('public.program-study.list');
+    Route::post('getLastEducation','API\PublicController@lastEducationList')->name('public.last-education.list');
+
+    Route::post('getCountry','API\PublicController@countryList')->name('public.country.list');
+    Route::post('getProvince','API\PublicController@provinceList')->name('public.province.list');
+    Route::post('getCity','API\PublicController@cityList')->name('public.city.list');
 
 });
 
