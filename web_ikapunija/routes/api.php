@@ -144,6 +144,7 @@ Route::delete('deleteDeclineAlumni','API\UserAlumniController@declineAlumni');
 // apps API //
 
 Route::group(['prefix' => 'mobile'], function () {
+
     Route::group(['prefix' => 'auth'], function () {
 
         Route::post('register', 'API\Mobile\AuthController@register')->name('mobile.auth.register');
@@ -152,31 +153,11 @@ Route::group(['prefix' => 'mobile'], function () {
         Route::post('forgotPassword','API\Mobile\AuthController@forgotPassword');
         Route::post('verifyForgotPassword','API\Mobile\AuthController@verifyForgotPassword');
         Route::post('updatePassword','API\Mobile\AuthController@updatePassword');
+    });
 
-        Route::group(['middleware' => 'jwt.verify'], function () {
-            Route::get('/user',function(){
-                try {
-
-                    if (! $user = JWTAuth::parseToken()->authenticate()) {
-                        return response()->json(['user_not_found'], 404);
-                    }
-
-                } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
-
-                    return response()->json(['token_expired'], $e->getStatusCode());
-
-                } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
-
-                    return response()->json(['token_invalid'], $e->getStatusCode());
-
-                } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
-
-                    return response()->json(['token_absent'], $e->getStatusCode());
-
-                }
-
-                return response()->json(compact('user'));
-            });
+    Route::group(['middleware' => 'jwt.verify'], function () {
+        Route::group(['prefix' => 'profile'], function () {
+            Route::get('detail','API\Mobile\ProfileController@detail');
         });
     });
 });

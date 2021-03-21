@@ -29,7 +29,7 @@ class AuthController extends Controller
             return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
         }
 
-        $user = UserAlumni::with(['country','province','city','jurusan','prodi','interests.interest'])->where([
+        $user = UserAlumni::where([
             'email' => $request->email,
             'password' => md5($request->password)
         ])->first();
