@@ -100,6 +100,8 @@ class AuthController extends Controller
                 $fileName = str_random(16).'-'.$dt->format('Y-m-d').'-profil-'.md5($alumni->email).'.'.$extension;
                 Storage::disk('profil')->put($fileName, file_get_contents($request->file('photo')));
                 $alumni->foto_profil = $fileName;
+            }else{
+                $alumni->foto_profil = 'default.png';
             }
 
             $alumni->save();
