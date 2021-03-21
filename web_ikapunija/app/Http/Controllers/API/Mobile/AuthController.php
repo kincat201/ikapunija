@@ -9,6 +9,7 @@ use App\Service\UserService;
 use App\Util\Constant;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -75,7 +76,7 @@ class AuthController extends Controller
         ];
 
         if($request->has('photo')){
-            $validate_rule['photo'] = 'max:9600|image';
+            $validate_rule['photo'] = 'max:9600|mimes:jpeg,jpg,png,JPG,JPEG,PNG';
         }
 
         $validator = Validator::make($request->all(), $validate_rule);
@@ -92,6 +93,15 @@ class AuthController extends Controller
             $alumni->password = md5($request->password);
             $alumni->active_code = md5(date("Y-m-d H:i:s"));
             $alumni->is_active = Constant::ACTIVE_STATUS_VERIFICATION;
+
+            if($request->has('photo')){
+                $dt = Carbon::now();
+                $extension = $request->file('photo')->getClientOriginalExtension();
+                $fileName = str_random(16).'-'.$dt->format('Y-m-d').'-profil-'.md5($alumni->email).'.'.$extension;
+                Storage::disk('profil')->put($fileName, file_get_contents($request->file('photo')));
+                $alumni->foto_profil = $fileName;
+            }
+
             $alumni->save();
 
             $alumniIntereset = [];
