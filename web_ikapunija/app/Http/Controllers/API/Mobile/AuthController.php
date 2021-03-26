@@ -71,7 +71,7 @@ class AuthController extends Controller
             'negara_id'      => 'required',
             'prodi_id'      => 'required',
             'profesi_id'    => 'required',
-            'interest_list'    => 'required|array|min:1',
+            //'interest_list'    => 'required|array|min:1',
             'last_education'    => 'required',
         ];
 
@@ -106,17 +106,20 @@ class AuthController extends Controller
 
             $alumni->save();
 
-            $alumniIntereset = [];
-            foreach ($request->interest_list as $interest){
-                $alumniIntereset[]=[
-                    'alumni_id'=>$alumni->id,
-                    'interest_id'=>$interest,
-                    'created_at'=>Carbon::now(),
-                    'updated_at'=>Carbon::now(),
-                ];
-            }
+            if($request->has('interest_list')){
 
-            InterestAlumni::insert($alumniIntereset);
+                $alumniIntereset = [];
+                foreach ($request->interest_list as $interest){
+                    $alumniIntereset[]=[
+                        'alumni_id'=>$alumni->id,
+                        'interest_id'=>$interest,
+                        'created_at'=>Carbon::now(),
+                        'updated_at'=>Carbon::now(),
+                    ];
+                }
+
+                InterestAlumni::insert($alumniIntereset);
+            }
 
             UserService::SendVerificationNewAlumni($alumni);
 

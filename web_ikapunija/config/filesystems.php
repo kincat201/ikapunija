@@ -114,6 +114,11 @@ return [
             'root'   => 'asset_image/foto_struktur',
         ],
 
+        'alumni_post_media' => [
+            'driver' => 'local',
+            'root'   => 'asset_image/alumni_post_media',
+        ],
+
     ],
 
     /*

@@ -89,11 +89,11 @@ class UserService {
         }
         else if($acumulate_time > 300)
         {
-            return ['status'=>true,'message'=>'Kode verifikasi expired, mohon lakukan request ulang!'];
+            return ['status'=>false,'message'=>'Kode verifikasi expired, mohon lakukan request ulang!'];
         }
         else
         {
-            return ['status'=>true,'message'=>'Kode Verifikasi Salah!'];
+            return ['status'=>false,'message'=>'Kode Verifikasi Salah!'];
         }
     }
 
@@ -114,11 +114,11 @@ class UserService {
         }
         else if($acumulate_time > 1800)
         {
-            return ['status'=>true,'message'=>'Kode verifikasi expired, mohon lakukan request ulang!'];
+            return ['status'=>false,'message'=>'Kode verifikasi expired, mohon lakukan request ulang!'];
         }
         else
         {
-            return ['status'=>true,'message'=>'Kode Verifikasi Salah!'];
+            return ['status'=>false,'message'=>'Kode Verifikasi Salah!'];
         }
     }
 
