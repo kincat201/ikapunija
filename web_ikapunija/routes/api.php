@@ -163,7 +163,7 @@ Route::group(['prefix' => 'mobile'], function () {
             Route::post('list','API\Mobile\AlumniPostController@list');
             Route::post('save','API\Mobile\AlumniPostController@save');
             Route::get('detail/{id}','API\Mobile\AlumniPostController@detail');
-            Route::delete('delete','API\Mobile\AlumniPostController@delete');
+            Route::post('delete','API\Mobile\AlumniPostController@delete');
             Route::post('like','API\Mobile\AlumniPostController@like');
             Route::post('comment','API\Mobile\AlumniPostController@comment');
             Route::post('reaction','API\Mobile\AlumniPostController@reaction');

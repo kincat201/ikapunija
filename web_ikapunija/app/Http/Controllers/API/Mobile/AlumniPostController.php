@@ -100,6 +100,7 @@ class AlumniPostController extends Controller
         $data = AlumniPost::find($request->id);
         if(empty($data)) return response()->json(ResponseService::ResponseError('Post not found!',200));
         $data->delete();
+        $data = AlumniPostService::MappingRowPost($data);
 
         return response()->json(ResponseService::ResponseSuccess('success delete post',$data),200);
     }
