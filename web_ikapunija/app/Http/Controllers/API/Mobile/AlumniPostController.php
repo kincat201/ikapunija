@@ -69,6 +69,7 @@ class AlumniPostController extends Controller
         foreach ($data->comment_list as $comment){
             $comments[]=[
                 'name'=> !empty($comment->alumni_comment->nama_alumni) ? $comment->alumni_comment->nama_alumni : '-',
+                'foto_profil'=> env('APP_ASSET').'user_alumni/profil/'.(!empty($comment->alumni_comment->foto_profil) ? $comment->alumni_comment->foto_profil : 'default.png'),
                 'angkatan'=> !empty($comment->alumni_comment->angkatan) ? $comment->alumni_comment->angkatan : '-',
                 'jurusan'=> !empty($comment->alumni_comment->jurusan->nama_jurusan) ? $comment->alumni_comment->jurusan->nama_jurusan : '-',
                 'content'=> $comment->content,
