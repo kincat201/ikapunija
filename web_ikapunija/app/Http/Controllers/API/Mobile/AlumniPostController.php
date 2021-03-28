@@ -56,13 +56,29 @@ class AlumniPostController extends Controller
             'alumni_posts.comments','alumni_posts.created_at','alumni_posts.updated_at','user_alumni.nama_alumni',
             'user_alumni.angkatan','user_alumni.foto_profil','jurusan.nama_jurusan','alumni_posts.created_at','alumni_posts.updated_at'
             )
-            ->with(['comments'])
+            ->with(['comment_list.alumni_comment.jurusan'])
             ->join('user_alumni','user_alumni.id','=','alumni_posts.alumni_id')
             ->join('jurusan','jurusan.id','=','user_alumni.jurusan_id')->find($id);
         if(empty($data)) return response()->json(ResponseService::ResponseError('Post not found!',200));
 
         $data = AlumniPostService::MappingRowPost($data);
         $data->reactions = $data->reactionResult();
+
+        $comments = [];
+
+        foreach ($data->comment_list as $comment){
+            $comments[]=[
+                'name'=> !empty($comment->alumni_comment->nama_alumni) ? $comment->alumni_comment->nama_alumni : '-',
+                'angkatan'=> !empty($comment->alumni_comment->angkatan) ? $comment->alumni_comment->angkatan : '-',
+                'jurusan'=> !empty($comment->alumni_comment->jurusan->nama_jurusan) ? $comment->alumni_comment->jurusan->nama_jurusan : '-',
+                'content'=> $comment->content,
+                'created_at'=> $comment->created_at,
+                'updated_at'=> $comment->updated_at,
+            ];
+        }
+
+        unset($data->comment_list);
+        $data->comment_list = $comments;
 
         return response()->json(ResponseService::ResponseSuccess('success get detail post',$data),200);
     }

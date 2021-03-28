@@ -53,7 +53,7 @@ class AlumniPost extends Model
         return $this->hasMany(AlumniPostLikes::class,'alumni_post_id','id');
     }
 
-    public function comments(){
+    public function comment_list(){
         return $this->hasMany(AlumniPostComments::class,'alumni_post_id','id');
     }
 
@@ -65,9 +65,15 @@ class AlumniPost extends Model
         $datas = $this->reactions();
         $result = [];
         foreach (Constant::POST_REACTION_LIST as $key => $val) {
-            $result[$key] = 0;
+            $result[$key] = [
+                'total'=>0,
+                'current_user_reaction'=>false,
+            ];
             foreach ($datas->get() as $data){
-                if($key == $data->reaction) $result[$key]++;
+                if($key == $data->reaction) {
+                    $result[$key]['total']++;
+                    if($data->alumni_reaction_id == \Auth::user()->id) $result[$key]['current_user_reaction'] = true;
+                }
             }
         }
         return $result;

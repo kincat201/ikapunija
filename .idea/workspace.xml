@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="093cb0b6-4109-4ee0-9655-3a8bd476ff34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/AlumniPostComments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/AlumniPostLikes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/AlumniPostReactions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/Service/AlumniPostService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Service/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/database/migrations/2021_03_21_094452_alumni_interest.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/database/migrations/2021_03_21_094452_alumni_interest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+            <state relative-caret-position="211">
+              <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
               <folding>
                 <element signature="e#51#70#0#PHP" expanded="true" />
               </folding>
@@ -44,12 +33,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Service/AlumniPostService.php">
+        <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/PublicController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="165">
+              <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
               <folding>
-                <element signature="e#31#50#0#PHP" expanded="true" />
+                <element signature="e#44#57#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,20 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/AlumniPostComments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="101" column="49" lean-forward="true" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
-              <folding>
-                <element signature="e#51#87#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-5">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -79,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Service/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="2057">
               <caret line="125" column="23" selection-end-line="139" />
               <folding>
                 <element signature="e#31#53#0#PHP" expanded="true" />
@@ -91,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="352">
+              <caret line="74" column="117" selection-start-line="74" selection-start-column="117" selection-end-line="74" selection-end-column="117" />
               <folding>
                 <element signature="e#23#45#0#PHP" expanded="true" />
               </folding>
@@ -103,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="459">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#51#87#0#PHP" expanded="true" />
               </folding>
@@ -115,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="250">
+              <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -124,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/config/filesystems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="114" column="10" lean-forward="true" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -133,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="865">
-              <caret line="162" column="58" lean-forward="true" selection-start-line="162" selection-start-column="58" selection-end-line="162" selection-end-column="58" />
+            <state relative-caret-position="2635">
+              <caret line="159" column="44" selection-start-line="159" selection-start-column="44" selection-end-line="159" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -164,6 +141,7 @@
       <find>https://ikapunija.com</find>
       <find>JWTAuth</find>
       <find>$url</find>
+      <find>comments</find>
     </findStrings>
     <dirStrings>
       <dir>D:\xampp\htdocs\ikapunija_v1\web_ikapunija</dir>
@@ -192,7 +170,6 @@
         <option value="$PROJECT_DIR$/web_ikapunija/database/migrations/2021_03_21_120726_province.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/database/migrations/2021_03_21_120732_city.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Service/CommonService.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/PublicController.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/City.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Country.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Province.php" />
@@ -218,14 +195,15 @@
         <option value="$PROJECT_DIR$/web_ikapunija/app/AlumniPostLoves.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/database/migrations/2021_03_24_135059_alumni_post_love.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/AlumniPostReactions.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/database/seeds/AlumniPostSeeder.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/config/filesystems.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/.env" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/ProfileController.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/AlumniPostComments.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/routes/api.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Service/AlumniPostService.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/routes/api.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/PublicController.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php" />
       </list>
@@ -355,17 +333,6 @@
             <path>
               <item name="ikapunija_v1" type="b2602c69:ProjectViewProjectNode" />
               <item name="ikapunija_v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ikapunija_v1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ikapunija_v1" type="462c0819:PsiDirectoryNode" />
-              <item name="asset_image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ikapunija_v1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ikapunija_v1" type="462c0819:PsiDirectoryNode" />
-              <item name="asset_image" type="462c0819:PsiDirectoryNode" />
-              <item name="alumni_post_media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ikapunija_v1" type="b2602c69:ProjectViewProjectNode" />
@@ -542,18 +509,19 @@
       <workItem from="1616473403388" duration="1247000" />
       <workItem from="1616558123793" duration="2363000" />
       <workItem from="1616646972268" duration="6143000" />
-      <workItem from="1616729922619" duration="5930000" />
+      <workItem from="1616729922619" duration="6238000" />
+      <workItem from="1616911600168" duration="1280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52728000" />
+    <option name="totallyTimeSpent" value="54316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2758389" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27986577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -744,13 +712,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Env.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Env.json" />
     <entry file="file://$PROJECT_DIR$/web_ikapunija/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -812,16 +774,6 @@
           <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
           <folding>
             <element signature="e#7#25#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/PublicController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="139" column="108" selection-start-line="121" selection-start-column="8" selection-end-line="139" selection-end-column="108" />
-          <folding>
-            <element signature="e#44#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,10 +845,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+          <folding>
+            <element signature="e#51#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Service/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="125" column="23" selection-end-line="139" />
+          <folding>
+            <element signature="e#31#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="459">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#51#87#0#PHP" expanded="true" />
           </folding>
@@ -905,76 +877,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="114" column="10" lean-forward="true" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Service/UserService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="125" column="23" selection-end-line="139" />
-          <folding>
-            <element signature="e#31#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="101" column="49" lean-forward="true" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
-          <folding>
-            <element signature="e#51#87#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1938">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="162" column="58" lean-forward="true" selection-start-line="162" selection-start-column="58" selection-end-line="162" selection-end-column="58" />
+        <state relative-caret-position="2635">
+          <caret line="159" column="44" selection-start-line="159" selection-start-column="44" selection-end-line="159" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/PublicController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
+          <folding>
+            <element signature="e#44#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Util/Constant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="250">
+          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/AlumniPostComments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding>
-            <element signature="e#51#70#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-5">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Service/AlumniPostService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="164">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#31#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/AlumniPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
+          <folding>
+            <element signature="e#51#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/AlumniPost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="74" column="117" selection-start-line="74" selection-start-column="117" selection-end-line="74" selection-end-column="117" />
           <folding>
             <element signature="e#23#45#0#PHP" expanded="true" />
           </folding>
