@@ -119,9 +119,9 @@ return [
             'root'   => 'asset_image/alumni_post_media',
         ],
 
-        'company' => [
+        'companies' => [
             'driver' => 'local',
-            'root'   => 'asset_image/company',
+            'root'   => 'asset_image/companies',
         ],
 
         'cities' => [

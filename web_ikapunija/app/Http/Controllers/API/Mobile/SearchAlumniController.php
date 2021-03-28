@@ -46,16 +46,16 @@ class SearchAlumniController extends Controller
         )
             ->where('user_alumni.is_active',Constant::ACTIVE_STATUS_YES)
             ->join('jurusan','jurusan.id','=','user_alumni.jurusan_id')
-            ->join('companies','companies.code','=','user_alumni.company')
+            ->leftJoin('companies','companies.code','=','user_alumni.company')
             ->join('profesi','profesi.id','=','user_alumni.profesi_id');
 
 
         if(!empty($request->filter['code'])){
             $code = $request->filter['code'];
             if($request->filter['types'] == Constant::SEARCH_ALUMNI_TYPES_LOCATION){
-                $model->where('city_id',$code);
+                $model->where('user_alumni.city_id',$code);
             }else{
-                $model->where('company',$code);
+                $model->where('user_alumni.company',$code);
             }
         }
 
