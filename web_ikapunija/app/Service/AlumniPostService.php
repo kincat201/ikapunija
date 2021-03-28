@@ -15,7 +15,7 @@ class AlumniPostService {
     public static function MappingRowPost($data){
         if($data->types == Constant::ALUMNI_POST_TYPES_OPPORTUNITY) $data->content = json_decode($data->content);
         if(!empty($data->media)) $data->media = env('APP_ASSET').'alumni_post_media/'.$data->media;
-        if(!empty($data->foto_profil)) $data->foto_profil = env('APP_ASSET').'user_alumni/profil/'.$data->foto_profil;
+        if(!empty($data->foto_profil)) $data->foto_profil = env('APP_ASSET').'user_alumni/profil/'.(!empty($data->foto_profil) ? $data->foto_profil : 'default.png');
         return $data;
     }
 

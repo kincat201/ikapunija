@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\Mobile;
 
 use App\Http\Controllers\Controller;
 use App\InterestAlumni;
+use App\Service\CompanyService;
 use App\Service\ResponseService;
 use App\Service\UserService;
 use App\Util\Constant;
@@ -94,7 +95,10 @@ class AuthController extends Controller
             $alumni->password = md5($request->password);
             $alumni->active_code = md5(date("Y-m-d H:i:s"));
             $alumni->is_active = Constant::ACTIVE_STATUS_VERIFICATION;
-            $alumni->nama_profesi = $request->company;
+
+            if($request->has('company')){
+                $alumni->company = CompanyService::CheckCompanyExist($request->company);
+            }
 
             if($request->has('photo')){
                 $dt = Carbon::now();

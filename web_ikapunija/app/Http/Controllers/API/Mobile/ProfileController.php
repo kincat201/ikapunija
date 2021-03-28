@@ -3,17 +3,13 @@
 namespace App\Http\Controllers\API\Mobile;
 
 use App\Http\Controllers\Controller;
-use App\InterestAlumni;
+use App\Service\CompanyService;
 use App\Service\ResponseService;
-use App\Service\UserService;
-use App\Util\Constant;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use JWTAuth;
 use App\UserAlumni;
-use DB;
 
 class ProfileController extends Controller
 {
@@ -23,7 +19,7 @@ class ProfileController extends Controller
 
         if(empty($data)) return response()->json(ResponseService::ResponseError('Alumni not found!',200));
 
-        $data->foto_profile = env('APP_ASSET').'user_alumni/profil/'.$data->foto_profil;
+        $data->foto_profil = env('APP_ASSET').'user_alumni/profil/'.(!empty($data->foto_profil) ? $data->foto_profil : 'default.png');
 
         return response()->json(ResponseService::ResponseSuccess('success get detail profile',$data));
     }
@@ -52,11 +48,14 @@ class ProfileController extends Controller
 
         $data = UserAlumni::find(\Auth::user()->id);
         $data->fill((array) $request->all());
-        $data->nama_profesi = $request->company;;
+
+        if($request->has('company')){
+            $data->company = CompanyService::CheckCompanyExist($request->company);
+        }
 
         if($request->has('photo')){
-            if(!empty($data->foto_profile) && file_exists('asset_image/user_alumni/profil/'.$data->foto_profile) && ($data->foto_profile != 'default.png')){
-                unlink('asset_image/user_alumni/profil/'.$data->foto_profile);
+            if(!empty($data->foto_profil) && file_exists('asset_image/user_alumni/profil/'.$data->foto_profil) && ($data->foto_profil != 'default.png')){
+                unlink('asset_image/user_alumni/profil/'.$data->foto_profil);
             }
             $dt = Carbon::now();
             $extension = $request->file('photo')->getClientOriginalExtension();
@@ -69,10 +68,9 @@ class ProfileController extends Controller
 
         $data = UserAlumni::with(['country','province','city','jurusan','prodi','profession','interests.interest'])->find(\Auth::user()->id);
 
-        $data->foto_profile = env('APP_ASSET').'user_alumni/profil/'.$data->foto_profil;
+        $data->foto_profil = env('APP_ASSET').'user_alumni/profil/'.(!empty($data->foto_profil) ? $data->foto_profil : 'default.png');
 
         return response()->json(ResponseService::ResponseSuccess('Success edit data!',$data));
-
     }
 }
 

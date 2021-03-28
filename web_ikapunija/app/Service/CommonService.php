@@ -132,4 +132,11 @@ class CommonService {
         return response()->json($datas);
     }
 
+    public static function CleanString($data = "",$upper = false) {
+        $data = str_replace(' ', '', $data); // Replaces all spaces.
+        $data = preg_replace('/[^A-Za-z0-9]/', '', $data); // Removes special chars.
+        if($upper) $data = strtoupper($data);
+        return $data;
+    }
+
 }

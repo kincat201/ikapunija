@@ -75,4 +75,12 @@ class Constant {
         self::POST_REACTION_CURIOUS => 'Curious',
     ];
 
+    const SEARCH_ALUMNI_TYPES_LOCATION = 'LOCATION';
+    const SEARCH_ALUMNI_TYPES_COMPANY = 'COMPANY';
+
+    const SEARCH_ALUMNI_TYPES_LIST = [
+        self::SEARCH_ALUMNI_TYPES_LOCATION => 'Location',
+        self::SEARCH_ALUMNI_TYPES_COMPANY => 'Companies',
+    ];
+
 }

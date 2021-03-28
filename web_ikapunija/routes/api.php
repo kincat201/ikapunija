@@ -162,6 +162,11 @@ Route::group(['prefix' => 'mobile'], function () {
             Route::post('update','API\Mobile\ProfileController@update');
         });
 
+        Route::group(['prefix' => 'search/alumni'], function () {
+            Route::post('list','API\Mobile\SearchAlumniController@list');
+            Route::post('listDetail','API\Mobile\SearchAlumniController@listDetail');
+        });
+
         Route::group(['prefix' => 'alumniPost'], function () {
             Route::post('list','API\Mobile\AlumniPostController@list');
             Route::post('save','API\Mobile\AlumniPostController@save');

@@ -119,6 +119,26 @@ return [
             'root'   => 'asset_image/alumni_post_media',
         ],
 
+        'company' => [
+            'driver' => 'local',
+            'root'   => 'asset_image/company',
+        ],
+
+        'cities' => [
+            'driver' => 'local',
+            'root'   => 'asset_image/cities',
+        ],
+
+        'provinces' => [
+            'driver' => 'local',
+            'root'   => 'asset_image/provinces',
+        ],
+
+        'countries' => [
+            'driver' => 'local',
+            'root'   => 'asset_image/countries',
+        ],
+
     ],
 
     /*
