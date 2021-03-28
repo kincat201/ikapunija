@@ -12,7 +12,7 @@ class InterestAlumni extends Model
      *
      * @var array
      */
-    protected $table = 'interestAlumni';
+    protected $table = 'interest_alumni';
     protected $fillable = [
         'id',
         'interest_id',

@@ -92,6 +92,10 @@ class UserAlumni extends Authenticatable implements JWTSubject
         return $this->hasMany(InterestAlumni::class,'alumni_id','id');
     }
 
+    public function profession(){
+        return $this->belongsTo(Profesi::class,'profesi_id','id');
+    }
+
     public function country(){
         return $this->belongsTo(Country::class,'negara_id','id');
     }

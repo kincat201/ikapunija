@@ -71,6 +71,7 @@ class AuthController extends Controller
             'negara_id'      => 'required',
             'prodi_id'      => 'required',
             'profesi_id'    => 'required',
+            'company'=> 'required',
             //'interest_list'    => 'required|array|min:1',
             'last_education'    => 'required',
         ];
@@ -93,6 +94,7 @@ class AuthController extends Controller
             $alumni->password = md5($request->password);
             $alumni->active_code = md5(date("Y-m-d H:i:s"));
             $alumni->is_active = Constant::ACTIVE_STATUS_VERIFICATION;
+            $alumni->nama_profesi = $request->company;
 
             if($request->has('photo')){
                 $dt = Carbon::now();

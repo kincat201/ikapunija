@@ -156,9 +156,12 @@ Route::group(['prefix' => 'mobile'], function () {
     });
 
     Route::group(['middleware' => 'jwt.verify'], function () {
+
         Route::group(['prefix' => 'profile'], function () {
-            Route::get('detail','API\Mobile\ProfileController@detail');
+            Route::get('detail/{id}','API\Mobile\ProfileController@detail');
+            Route::post('update','API\Mobile\ProfileController@update');
         });
+
         Route::group(['prefix' => 'alumniPost'], function () {
             Route::post('list','API\Mobile\AlumniPostController@list');
             Route::post('save','API\Mobile\AlumniPostController@save');
