@@ -172,6 +172,7 @@ class AlumniPostService {
             'referenceId'=> $alumniPost->id,
             'subject'=> Constant::NOTIFICATION_TYPE_ALUMNI_SUBJECT_LIST[$types],
             'description'=> \Auth::user()->nama_alumni. ' '.Constant::NOTIFICATION_TYPE_ALUMNI_MESSAGE_LIST[$types],
+            'status'=> Constant::NOTIFICATION_STATUS_UNREAD,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

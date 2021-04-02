@@ -176,6 +176,11 @@ Route::group(['prefix' => 'mobile'], function () {
             Route::post('comment','API\Mobile\AlumniPostController@comment');
             Route::post('reaction','API\Mobile\AlumniPostController@reaction');
         });
+
+        Route::group(['prefix' => 'notification'], function () {
+            Route::post('list','API\Mobile\NotificationController@list');
+            Route::post('setRead','API\Mobile\NotificationController@setRead');
+        });
     });
 });
 
@@ -197,6 +202,6 @@ Route::group(['prefix' => 'public'], function () {
 
 Route::get('send-notification',function(){
     $receivers = [\Request::get('token')];
-   return response()->json(\App\Service\NotificationService::SendPushNotification(['subject'=>'xx','message'=>'asdasd'],$receivers));
+   return response()->json(\App\Service\NotificationService::SendPushNotification(['subject'=>'xx','description'=>'asdasd'],$receivers));
 });
 
