@@ -57,6 +57,9 @@ class AuthController extends Controller
         }
 
         UserService::GenerateUserLog($user->id,$user->email,Constant::USER_LOG_USER_MODE,str_random(32));
+        if($request->has('device_token')){
+            UserService::SaveDeviceToken($user->id,$request->device_token);
+        }
 
         return response()->json(ResponseService::ResponseSuccess('Berhasil authentikasi.',compact('user','token')));
     }

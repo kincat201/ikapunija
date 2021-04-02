@@ -93,6 +93,7 @@ class AlumniPostController extends Controller
 
         if($request->has('media')){
             $validate_rule['media'] = 'max:9600|mimes:jpeg,jpg,png,JPG,JPEG,PNG';
+            $validate_rule['media_types'] = 'required';
         }
 
         if ($validator->fails()) {

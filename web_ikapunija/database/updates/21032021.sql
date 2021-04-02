@@ -13,3 +13,6 @@ ALTER TABLE `provinces`
 
 ALTER TABLE `countries`
 	ADD COLUMN `image` VARCHAR(255) NULL DEFAULT 'default.png' AFTER `name`;
+
+ALTER TABLE `user_alumni`
+	ADD COLUMN `device_token` TEXT NULL DEFAULT NULL AFTER `active_code`;

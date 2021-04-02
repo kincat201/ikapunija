@@ -46,6 +46,7 @@ class UserAlumni extends Authenticatable implements JWTSubject
         'city_other',
         'company',
         'last_education',
+        'device_token',
     ];
     /**
      * The attributes that should be hidden for arrays.

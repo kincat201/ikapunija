@@ -55,6 +55,14 @@ class Constant {
         self::ALUMNI_POST_TYPES_OPPORTUNITY => 'Opportunity',
     ];
 
+    const ALUMNI_POST_MEDIA_TYPES_PHOTO = 'PHOTO';
+    const ALUMNI_POST_MEDIA_TYPES_VIDEO = 'VIDEO';
+
+    const ALUMNI_POST_MEDIA_TYPES_LIST = [
+        self::ALUMNI_POST_MEDIA_TYPES_PHOTO => 'Photo',
+        self::ALUMNI_POST_MEDIA_TYPES_VIDEO => 'Video',
+    ];
+
     const POST_OPPORTUNITY_TYPE_FULL_TIME = 'FULL_TIME';
     const POST_OPPORTUNITY_TYPE_PART_TIME = 'PART_TIME';
     const POST_OPPORTUNITY_TYPE_FREELANCE = 'FREELANCE';
@@ -83,4 +91,41 @@ class Constant {
         self::SEARCH_ALUMNI_TYPES_COMPANY => 'Companies',
     ];
 
+    const NOTIFICATION_STATUS_READ = 'READ';
+    const NOTIFICATION_STATUS_UNREAD = 'UNREAD';
+
+    const NOTIFICATION_STATUS = [
+        self::NOTIFICATION_STATUS_READ => 'Terbaca',
+        self::NOTIFICATION_STATUS_UNREAD => 'Belum Dibaca',
+    ];
+
+    const NOTIFICATION_TYPE_GENERAL = 'GENERAL';
+    const NOTIFICATION_TYPE_ALUMNI_POST_LIKE = 'ALUMNI_POST_LIKE';
+    const NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION = 'ALUMNI_POST_INTERACTION';
+    const NOTIFICATION_TYPE_ALUMNI_POST_COMMENT = 'ALUMNI_POST_COMMENT';
+    const NOTIFICATION_TYPE_ALUMNI_POST_OPPORTUNITY = 'ALUMNI_POST_OPPORTUNITY';
+
+    const NOTIFICATION_TYPE_ALUMNI_LIST = [
+        self::NOTIFICATION_TYPE_GENERAL => 'Umum',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_LIKE => 'Post di like',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION => 'Post di tanggapi',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_COMMENT => 'Post di komentari',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_OPPORTUNITY => 'Lowongan Kerja',
+    ];
+
+    const NOTIFICATION_TYPE_ALUMNI_SUBJECT_LIST = [
+        self::NOTIFICATION_TYPE_GENERAL => 'Informasi Umum',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_LIKE => 'Postingan Mendapat Like',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION => 'Postingan Mendapat Reaksi',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_COMMENT => 'Balasan Komentar',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_OPPORTUNITY => 'Lowongan Pekerjaan',
+    ];
+
+    const NOTIFICATION_TYPE_ALUMNI_MESSAGE_LIST = [
+        self::NOTIFICATION_TYPE_GENERAL => '',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_LIKE => 'Memberikan Like Postingamu',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION => 'Memberi Reaksi Postingamu',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_COMMENT => 'Mengomentari Postingamu',
+        self::NOTIFICATION_TYPE_ALUMNI_POST_OPPORTUNITY => 'Memposting Lowongan Pekerjaan',
+    ];
 }

@@ -195,3 +195,8 @@ Route::group(['prefix' => 'public'], function () {
 
 });
 
+Route::get('send-notification',function(){
+    $receivers = [\Request::get('token')];
+   return response()->json(\App\Service\NotificationService::SendPushNotification(['subject'=>'xx','message'=>'asdasd'],$receivers));
+});
+

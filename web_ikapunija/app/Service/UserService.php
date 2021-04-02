@@ -135,5 +135,12 @@ class UserService {
             ->send(new SendMail($dataUser));
     }
 
+    public static function SaveDeviceToken($alumniId, $token){
+        $alumni = UserAlumni::find($alumniId);
+        if(empty($alumni->id)  || empty($token) || $alumni->device_token == $token) return false;
+        $alumni->device_token = $token;
+        return $alumni->save();
+    }
+
 
 }
