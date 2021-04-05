@@ -26,6 +26,12 @@ class SearchAlumniController extends Controller
             $model->groupBy('user_alumni.company');
         }
 
+        if(empty($request->filter['countryId'])){
+            $model->where('negara_id','!=','ID');
+        }else{
+            $model->where('negara_id',$request->filter['countryId']);
+        }
+
         $datas = CommonService::GenerateListModel($model, $option,true);
         $result = [];
 
