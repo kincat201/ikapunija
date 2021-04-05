@@ -24,6 +24,10 @@ class NotificationController extends Controller
             $search = $request->filter['search'];
         }
 
+        if (!empty($request->filter['status'])) {
+            $model->where('status',$request->filter['status']);
+        }
+
         $datas = CommonService::GenerateListModel($model, $option);
         $result = [];
 
