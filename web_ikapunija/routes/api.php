@@ -158,6 +158,7 @@ Route::group(['prefix' => 'mobile'], function () {
     Route::group(['middleware' => 'jwt.verify'], function () {
 
         Route::group(['prefix' => 'profile'], function () {
+            Route::post('setDeviceToken','API\Mobile\ProfileController@setDeviceToken');
             Route::get('detail/{id}','API\Mobile\ProfileController@detail');
             Route::post('update','API\Mobile\ProfileController@update');
         });

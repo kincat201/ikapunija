@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\Mobile;
 use App\Http\Controllers\Controller;
 use App\Service\CompanyService;
 use App\Service\ResponseService;
+use App\Service\UserService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -72,6 +73,27 @@ class ProfileController extends Controller
 
         return response()->json(ResponseService::ResponseSuccess('Success edit data!',$data));
     }
+
+    public function setDeviceToken(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'device_token'=> 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(ResponseService::ResponseError('Invalid Payload', $validator->errors()),200);
+        }
+
+        $user = \Auth::user();
+
+        if(empty($user->id)) return response()->json(ResponseService::ResponseError('User not valid!'),200);
+
+        UserService::SaveDeviceToken($user->id,$request->device_token);
+
+        return response()->json(ResponseService::ResponseSuccess('Berhasil set device token.'));
+    }
+
 }
 
 
