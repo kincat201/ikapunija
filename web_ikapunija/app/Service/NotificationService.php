@@ -42,8 +42,14 @@ class NotificationService {
             $data = [
                 "registration_ids" => $registration_ids,
                 "notification" => [
-                    "subject" => $payload['subject'],
-                    "message" => $payload['description'],
+                    "title" => $payload['subject'],
+                    "body" => $payload['description'],
+                ],
+                "data"=>[
+                    "title" => $payload['subject'],
+                    "body" => $payload['description'],
+                    "type"=> $payload['types'],
+                    "referenceId"=> $payload['referenceId'],
                 ]
             ];
             $dataString = json_encode($data);
