@@ -43,7 +43,14 @@ class AlumniPostController extends Controller
         $result = [];
 
         foreach ($datas['list'] as $row) {
-            $result[] = AlumniPostService::MappingRowPost($row);;
+            $data_post = AlumniPostService::MappingRowPost($row);
+            $data_post['reaction_total'] = 0;
+            $alumni_post = AlumniPost::find($row->id);
+            $data_post['reactions'] = $alumni_post->reactionResult();
+            foreach ($data_post['reactions'] as $reaction){
+                $data_post['reaction_total']+=$reaction['total'];
+            }
+            $result[] = $data_post;
         }
 
         return response()->json(ResponseService::ResponseList($result, $option, $datas['total'], $request));
@@ -157,7 +164,7 @@ class AlumniPostController extends Controller
 
         $data = AlumniPostService::SetCommentPost($data,$request);
 
-        return response()->json(ResponseService::ResponseSuccess('success save post',$data));
+        return response()->json(ResponseService::ResponseSuccess('success save comment post',$data));
     }
 
     public function reaction(Request $request){
@@ -176,7 +183,7 @@ class AlumniPostController extends Controller
 
         $data = AlumniPostService::SetReactionPost($data,$request);
 
-        return response()->json(ResponseService::ResponseSuccess('success set like post',$data),200);
+        return response()->json(ResponseService::ResponseSuccess('success set reaction post',$data),200);
     }
 }
 
