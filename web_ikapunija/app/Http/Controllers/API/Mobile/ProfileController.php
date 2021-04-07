@@ -78,7 +78,7 @@ class ProfileController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'device_token'=> 'required'
+            //'device_token'=> 'required'
         ]);
 
         if ($validator->fails()) {
