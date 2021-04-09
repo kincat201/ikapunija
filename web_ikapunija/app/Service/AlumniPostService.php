@@ -188,7 +188,7 @@ class AlumniPostService {
             $notifications[] = $notif;
             if(!empty($alumni->device_token)) $receiverId[] = $alumni->id;
         }
-        $notificationList = NotificationService::SendNotification($notifications, true);
+        NotificationService::SendNotification($notifications, true);
         $notification_data['notification_id'] = null;
         $notification_data['send_all'] = true;
 

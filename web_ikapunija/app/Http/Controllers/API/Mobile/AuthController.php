@@ -72,6 +72,7 @@ class AuthController extends Controller
             'negara_id'      => 'required',
             'prodi_id'      => 'required',
             'profesi_id'    => 'required',
+            'nama_profesi'    => 'required',
             'company'=> 'required',
             //'interest_list'    => 'required|array|min:1',
             'last_education'    => 'required',

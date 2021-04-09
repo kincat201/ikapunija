@@ -32,6 +32,7 @@ class ProfileController extends Controller
             'angkatan'      => 'required|numeric',
             'jurusan_id'    => 'required',
             'profesi_id'    => 'required',
+            'nama_profesi'    => 'required',
             'company'    => 'required',
             'contact'    => 'required',
             'last_education'    => 'required',
