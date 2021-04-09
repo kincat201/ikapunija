@@ -153,7 +153,8 @@ class AlumniPostService {
                 $notification_data['subject'] = Constant::NOTIFICATION_TYPE_ALUMNI_SUBJECT_LIST[$types];
                 $notification_data['description'] = \Auth::user()->nama_alumni. ' '.Constant::NOTIFICATION_TYPE_ALUMNI_MESSAGE_LIST[$types];
                 $notification = NotificationService::SendNotification($notification_data);
-                $notification_data['notification_list'] = [['notification_id'=>$notification->id,'receiverId'=>$notification->receiverId]];
+                $notification_data['notification_id'] = $notification->id;
+                $notification_data['send_all'] = false;
 
                 if($push_notification){
                     NotificationService::SendPushNotification($notification_data,[$alumniPost->alumni_id]);
@@ -187,12 +188,9 @@ class AlumniPostService {
             $notifications[] = $notif;
             if(!empty($alumni->device_token)) $receiverId[] = $alumni->id;
         }
-
-        $notification_data['notification_list'] = [];
         $notificationList = NotificationService::SendNotification($notifications, true);
-        foreach ($notificationList as $notification){
-            $notification_data['notification_list'][] = ['notification_id'=>$notification->id,'receiverId'=>$notification->receiverId];
-        }
+        $notification_data['notification_id'] = null;
+        $notification_data['send_all'] = true;
 
         if($push_notification){
             NotificationService::SendPushNotification($notification_data,$receiverId);

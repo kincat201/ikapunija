@@ -20,16 +20,7 @@ class NotificationService {
             $notification->save();
             return $notification;
         }else{
-            $firstId = Notification::orderBy('id','desc')->first()->id;
             Notification::insert($data);
-            $lastId = Notification::orderBy('id','desc')->first()->id;
-            return Notification::select('notifications.id','notifications.receiverId')
-                ->join('user_alumni','user_alumni.id','=','notifications.receiverId')
-                ->where('notifications.type',$data[0]['type'])
-                ->where('notifications.id','>=',$firstId)
-                ->where('notifications.id','<=',$lastId)
-                ->whereNotNull('user_alumni.device_token')
-                ->get();
         }
     }
 
@@ -60,7 +51,8 @@ class NotificationService {
                     "body" => $payload['description'],
                     "type"=> $payload['type'],
                     "referenceId"=> $payload['referenceId'],
-                    "notification_list"=>$payload['notification_list']
+                    "send_all"=> $payload['send_all'],
+                    "notification_id"=>$payload['notification_id']
                 ]
             ];
             $dataString = json_encode($data);
