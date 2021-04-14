@@ -118,18 +118,26 @@ class AlumniPostService {
         $data = AlumniPostReactions::where($field)->first();
         $field['reaction'] = $request->content;
 
-        if(!empty($data)){
-            $data->delete();
-            self::SetAlumniPostNotificationSingle($alumniPost, Constant::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION);
-        }else{
+        if(empty($data) || (!empty($data) && $data->reaction != $request->content)){
+
             $field['alumni_id'] = $alumniPost->alumni_id;
-            $data = new AlumniPostReactions();
-            $data->fill((array) $field);
-            $data->save();
-            self::SetAlumniPostNotificationSingle($alumniPost, Constant::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION, true,true);
+            $newReaction = new AlumniPostReactions();
+            $newReaction->fill((array) $field);
+            $newReaction->save();
+            if(empty($data)){
+                self::SetAlumniPostNotificationSingle($alumniPost, Constant::NOTIFICATION_TYPE_ALUMNI_POST_INTERACTION, true,true);
+            }
         }
 
-        return self::MappingRowPost($alumniPost);
+        if(!empty($data)){
+            $data->delete();
+        }
+
+        $alumniPost = AlumniPost::find($alumniPost->id);
+        $result = AlumniPostService::MappingRowPost($alumniPost);
+        $result->reactions = $alumniPost->reactionResult();
+
+        return $result;
     }
 
     public static function SetAlumniPostNotificationSingle($alumniPost, $types,$create = false, $push_notification = false){
