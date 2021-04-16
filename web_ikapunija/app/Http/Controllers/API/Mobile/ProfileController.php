@@ -16,7 +16,8 @@ class ProfileController extends Controller
 {
     public function detail($id)
     {
-        $data = UserAlumni::with(['country','province','city','jurusan','prodi','profession','interests.interest'])->find($id);
+        $data = UserAlumni::with(['country','province','city','jurusan','prodi','profession','interests.interest','occupation'])->find($id);
+        $data->companyName = !empty($data->occupation) ? $data->occupation->name : "-";
 
         if(empty($data)) return response()->json(ResponseService::ResponseError('Alumni not found!',200));
 

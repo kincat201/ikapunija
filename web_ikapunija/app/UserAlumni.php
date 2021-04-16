@@ -108,4 +108,8 @@ class UserAlumni extends Authenticatable implements JWTSubject
     public function city(){
         return $this->belongsTo(City::class,'city_id','id');
     }
+
+    public function occupation(){
+        return $this->belongsTo(Company::class,'company','code');
+    }
 }
