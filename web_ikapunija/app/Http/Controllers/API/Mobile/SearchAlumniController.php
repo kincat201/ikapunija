@@ -48,7 +48,7 @@ class SearchAlumniController extends Controller
         $option = CommonService::GenerateDefaultOption($request);
         $model = UserAlumni::select(
             'user_alumni.id','user_alumni.nama_alumni','user_alumni.angkatan','user_alumni.foto_profil','jurusan.nama_jurusan',
-            'user_alumni.nama_profesi','profesi.nama_profesi','user_alumni.city_id','user_alumni.company','companies.name as companyName'
+            'user_alumni.nama_profesi','profesi.nama_profesi as jenis_profesi','user_alumni.nama_profesi','user_alumni.city_id','user_alumni.company','companies.name as companyName'
         )
             ->where('user_alumni.is_active',Constant::ACTIVE_STATUS_YES)
             ->join('jurusan','jurusan.id','=','user_alumni.jurusan_id')
