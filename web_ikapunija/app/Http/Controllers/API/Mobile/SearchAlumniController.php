@@ -17,9 +17,15 @@ class SearchAlumniController extends Controller
         $model = UserAlumni::query();
         $model->where('user_alumni.is_active',Constant::ACTIVE_STATUS_YES);
         if($request->filter['types'] == Constant::SEARCH_ALUMNI_TYPES_LOCATION){
-            $model->select('cities.id as code','cities.name',\DB::raw("CONCAT('cities/',cities.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
-            $model->join('cities','user_alumni.city_id','=','cities.id');
-            $model->groupBy('user_alumni.city_id');
+            if(empty($request->filter['countryId'])){
+                $model->select('countries.id as code','countries.name',\DB::raw("CONCAT('countries/',countries.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
+                $model->join('countries','user_alumni.negara_id','=','countries.id');
+                $model->groupBy('user_alumni.negara_id');
+            }else{
+                $model->select('cities.id as code','cities.name',\DB::raw("CONCAT('cities/',cities.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
+                $model->join('cities','user_alumni.city_id','=','cities.id');
+                $model->groupBy('user_alumni.city_id');
+            }
         }else{
             $model->select('companies.code','companies.name',\DB::raw("CONCAT('companies/',companies.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
             $model->join('companies','user_alumni.company','=','companies.code');
@@ -28,6 +34,7 @@ class SearchAlumniController extends Controller
 
         if(empty($request->filter['countryId'])){
             $model->where('negara_id','!=','ID');
+            $model->whereNotNull('negara_id');
         }else{
             $model->where('negara_id',$request->filter['countryId']);
         }
@@ -48,7 +55,7 @@ class SearchAlumniController extends Controller
         $option = CommonService::GenerateDefaultOption($request);
         $model = UserAlumni::select(
             'user_alumni.id','user_alumni.nama_alumni','user_alumni.angkatan','user_alumni.foto_profil','jurusan.nama_jurusan',
-            'user_alumni.nama_profesi','profesi.nama_profesi as jenis_profesi','user_alumni.nama_profesi','user_alumni.city_id','user_alumni.company','companies.name as companyName'
+            'user_alumni.nama_profesi','profesi.nama_profesi as jenis_profesi','user_alumni.nama_profesi','user_alumni.city_id','user_alumni.negara_id','user_alumni.company','companies.name as companyName'
         )
             ->where('user_alumni.is_active',Constant::ACTIVE_STATUS_YES)
             ->join('jurusan','jurusan.id','=','user_alumni.jurusan_id')
@@ -59,7 +66,11 @@ class SearchAlumniController extends Controller
         if(!empty($request->filter['code'])){
             $code = $request->filter['code'];
             if($request->filter['types'] == Constant::SEARCH_ALUMNI_TYPES_LOCATION){
-                $model->where('user_alumni.city_id',$code);
+                if(is_int($code)){
+                    $model->where('user_alumni.city_id',$code);
+                }else{
+                    $model->where('user_alumni.negara_id',$code);
+                }
             }else{
                 $model->where('user_alumni.company',$code);
             }
