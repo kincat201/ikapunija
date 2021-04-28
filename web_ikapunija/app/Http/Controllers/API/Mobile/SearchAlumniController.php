@@ -66,7 +66,8 @@ class SearchAlumniController extends Controller
         if(!empty($request->filter['code'])){
             $code = $request->filter['code'];
             if($request->filter['types'] == Constant::SEARCH_ALUMNI_TYPES_LOCATION){
-                if(is_int($code)){
+                $checkCode = (int) $code;
+                if(is_int($checkCode) && $checkCode !== 0){
                     $model->where('user_alumni.city_id',$code);
                 }else{
                     $model->where('user_alumni.negara_id',$code);
