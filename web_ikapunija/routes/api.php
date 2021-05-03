@@ -206,3 +206,18 @@ Route::get('send-notification',function(){
    return response()->json(\App\Service\NotificationService::SendPushNotification(['subject'=>'xx','description'=>'asdasd'],$receivers));
 });
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'city'], function () {
+        Route::get('detail/{id}','API\Admin\CityController@detail');
+        Route::post('update','API\Admin\CityController@update');
+    });
+    Route::group(['prefix' => 'company'], function () {
+        Route::get('detail/{id}','API\Admin\CompanyController@detail');
+        Route::post('update','API\Admin\CompanyController@update');
+    });
+    Route::group(['prefix' => 'country'], function () {
+        Route::get('detail/{id}','API\Admin\CountryController@detail');
+        Route::post('update','API\Admin\CountryController@update');
+    });
+});
+
