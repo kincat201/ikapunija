@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="093cb0b6-4109-4ee0-9655-3a8bd476ff34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_ikapunija/resources/views/cms/city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ikapunija/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="573">
@@ -65,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="e#51#64#0#PHP" expanded="true" />
               </folding>
@@ -77,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="488">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="e#50#63#0#PHP" expanded="true" />
               </folding>
@@ -86,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="-138">
+              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding>
                 <element signature="e#50#66#0#PHP" expanded="true" />
               </folding>
@@ -227,10 +224,10 @@
         <option value="$PROJECT_DIR$/web_ikapunija/routes/web.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/resources/views/cms/city.blade.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php" />
-        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php" />
         <option value="$PROJECT_DIR$/web_ikapunija/routes/api.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php" />
+        <option value="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php" />
       </list>
     </option>
   </component>
@@ -567,12 +564,12 @@
       <workItem from="1619667329298" duration="608000" />
       <workItem from="1619753430083" duration="593000" />
       <workItem from="1619831938420" duration="595000" />
-      <workItem from="1620010765387" duration="2634000" />
+      <workItem from="1620010765387" duration="2876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125640000" />
+    <option name="totallyTimeSpent" value="125882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -909,40 +906,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="220" column="7" lean-forward="true" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding>
             <element signature="e#51#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#50#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CountryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="488">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding>
             <element signature="e#50#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_ikapunija/routes/api.php">
+    <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Admin/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="220" column="7" lean-forward="true" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
+        <state relative-caret-position="-138">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="e#50#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

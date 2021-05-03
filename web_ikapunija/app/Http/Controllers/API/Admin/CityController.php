@@ -27,7 +27,7 @@ class CityController extends Controller
     {
         $validate_rule = [
             'id'   => 'required',
-            'name'   => 'required',
+            //'name'   => 'required',
         ];
 
         if($request->has('image')){
