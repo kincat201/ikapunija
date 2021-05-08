@@ -59,7 +59,7 @@ class AlumniPostController extends Controller
     public function detail($id)
     {
         $data = AlumniPost::select(
-            'alumni_posts.id','alumni_posts.types','alumni_posts.content','alumni_posts.media','alumni_posts.likes',
+            'alumni_posts.id','alumni_posts.alumni_id','alumni_posts.types','alumni_posts.content','alumni_posts.media','alumni_posts.likes',
             'alumni_posts.comments','alumni_posts.created_at','alumni_posts.updated_at','user_alumni.nama_alumni',
             'user_alumni.angkatan','user_alumni.foto_profil','jurusan.nama_jurusan','alumni_posts.created_at','alumni_posts.updated_at'
             )
