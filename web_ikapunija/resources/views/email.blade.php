@@ -51,7 +51,7 @@
                           <span style="font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;color:#141823">
                             Halo {{ $data['name'] }},
                             @if($data['subject'] == 'Verifikasi Akun')
-                              <p>Anda dapat masuk ke ke <a href="{{ env('API_URL') }}verifikasi_akun/{{ $data['email'] }}/{{ $data['code'] }}" target="_blank">Halaman Berikut<a> untuk login ke Webiste Ikapunija dan aplikasi MyPNJ</p>
+                              <p>Silakan verifikasi email anda dihalaman <a href="{{ env('API_URL') }}verifikasi_akun/{{ $data['email'] }}/{{ $data['code'] }}" target="_blank">Halaman Berikut<a> sebelum dapat diverifikasi oleh admin untuk login ke Webiste Ikapunija dan aplikasi MyPNJ</p>
                             @elseif($data['subject'] == 'Approval Akun')
                               <p>Selamat Akun Anda Berhasil Terdaftar, Silahkan login pada link berikut : <a href="https://ikapunija.com/login" target="_blank">https://ikapunija.com/login<a> untuk melakukan login ke Webiste Ikapunija dan aplikasi MyPNJ</p>
                             @elseif($data['subject'] == 'Decline Akun')
