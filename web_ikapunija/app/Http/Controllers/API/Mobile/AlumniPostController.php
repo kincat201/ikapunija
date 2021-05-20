@@ -95,7 +95,6 @@ class AlumniPostController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'types'=> 'required',
-            'content'=> 'required',
         ]);
 
         if($request->has('media')){
