@@ -26,17 +26,18 @@ class SearchAlumniController extends Controller
                 $model->join('cities','user_alumni.city_id','=','cities.id');
                 $model->groupBy('user_alumni.city_id');
             }
+
+            if(empty($request->filter['countryId'])){
+                $model->where('negara_id','!=','ID');
+                $model->whereNotNull('negara_id');
+            }else{
+                $model->where('negara_id',$request->filter['countryId']);
+            }
+
         }else{
             $model->select('companies.code','companies.name',\DB::raw("CONCAT('companies/',companies.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
             $model->join('companies','user_alumni.company','=','companies.code');
             $model->groupBy('user_alumni.company');
-        }
-
-        if(empty($request->filter['countryId'])){
-            $model->where('negara_id','!=','ID');
-            $model->whereNotNull('negara_id');
-        }else{
-            $model->where('negara_id',$request->filter['countryId']);
         }
 
         $datas = CommonService::GenerateListModel($model, $option,true);
