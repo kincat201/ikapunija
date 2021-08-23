@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="093cb0b6-4109-4ee0-9655-3a8bd476ff34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/SearchAlumniController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/SearchAlumniController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/SearchAlumniController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
               <folding>
                 <element signature="e#51#87#0#PHP" expanded="true" />
               </folding>
@@ -579,18 +578,18 @@
       <workItem from="1629193843402" duration="273000" />
       <workItem from="1629252306765" duration="590000" />
       <workItem from="1629426446771" duration="592000" />
-      <workItem from="1629691589219" duration="971000" />
+      <workItem from="1629691589219" duration="1638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148333000" />
+    <option name="totallyTimeSpent" value="149000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.111409396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.252349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -934,7 +933,7 @@
     <entry file="file://$PROJECT_DIR$/web_ikapunija/app/Http/Controllers/API/Mobile/SearchAlumniController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
           <folding>
             <element signature="e#51#87#0#PHP" expanded="true" />
           </folding>
