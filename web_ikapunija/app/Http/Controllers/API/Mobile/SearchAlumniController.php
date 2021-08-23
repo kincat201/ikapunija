@@ -38,6 +38,10 @@ class SearchAlumniController extends Controller
             $model->select('companies.code','companies.name',\DB::raw("CONCAT('companies/',companies.image) as image"),\DB::raw('COUNT(user_alumni.id) as total_alumni'));
             $model->join('companies','user_alumni.company','=','companies.code');
             $model->groupBy('user_alumni.company');
+
+            if(!empty($request->filter['code']) || $request->filter['code'] === "0"){
+                $model->where('companies.code','=',$request->filter['code']);
+            }
         }
 
         $datas = CommonService::GenerateListModel($model, $option,true);
